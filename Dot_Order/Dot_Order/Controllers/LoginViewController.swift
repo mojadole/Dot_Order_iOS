@@ -8,16 +8,18 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var kakaoLoginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
     }
 
-
+    @IBAction func kakaoLoginButton(_ sender: Any) {
+        guard let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return }
+        mainViewController.modalPresentationStyle = .fullScreen
+        self.present(mainViewController, animated: true, completion: nil)
+    }
+    
 }
 

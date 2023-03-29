@@ -22,30 +22,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-Sp-n6O">
-                                <rect key="frame" x="26" y="291" width="340" height="271"/>
+                                <rect key="frame" x="26" y="290.66666666666669" width="341" height="271.00000000000006"/>
                                 <color key="backgroundColor" name="main_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="height" multiplier="341:271" id="cg8-i4-gVk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="64"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="주문하기">
                                     <color key="titleColor" name="background_color"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3a-gG-8P5">
-                                <rect key="frame" x="26" y="603" width="340" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3a-gG-8P5">
+                                <rect key="frame" x="26" y="603" width="341" height="107"/>
                                 <color key="backgroundColor" name="main_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g3a-gG-8P5" secondAttribute="height" multiplier="341:107" id="Uef-Uu-xq0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="48"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="최근 주문 내역">
                                     <color key="titleColor" name="background_color"/>
                                 </state>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_white_image" translatesAutoresizingMaskIntoConstraints="NO" id="7AC-m4-rlb">
+                                <rect key="frame" x="77" y="109" width="239" height="127.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7AC-m4-rlb" secondAttribute="height" multiplier="15:8" id="uZJ-9Y-7i9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="background_color"/>
                         <constraints>
                             <constraint firstItem="0Ds-Sp-n6O" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="1Pt-53-sod"/>
+                            <constraint firstItem="0Ds-Sp-n6O" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="26" id="Nfa-cO-apa"/>
+                            <constraint firstItem="7AC-m4-rlb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RSh-dd-VMo"/>
+                            <constraint firstItem="g3a-gG-8P5" firstAttribute="top" secondItem="0Ds-Sp-n6O" secondAttribute="bottom" constant="41.333333333333258" id="ZNo-PO-kSu"/>
+                            <constraint firstItem="7AC-m4-rlb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="gll-Aw-0Z9"/>
                             <constraint firstItem="0Ds-Sp-n6O" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hbx-MH-chY"/>
+                            <constraint firstItem="7AC-m4-rlb" firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="width" multiplier="0.7" id="k2B-zO-AqU"/>
+                            <constraint firstItem="g3a-gG-8P5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rzj-gI-pZs"/>
+                            <constraint firstItem="g3a-gG-8P5" firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="width" id="xdb-se-Cuw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -59,11 +77,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo_white_image" width="357.66665649414062" height="170.66667175292969"/>
         <namedColor name="background_color">
-            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.15700000524520874" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="main_color">
-            <color red="1" green="0.83529411764705885" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.83499997854232788" blue="0.23100000619888306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

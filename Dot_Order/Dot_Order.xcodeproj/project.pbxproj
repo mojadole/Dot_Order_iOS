@@ -15,7 +15,12 @@
 		A887D01429D03CC0003715FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A887D01229D03CC0003715FA /* LaunchScreen.storyboard */; };
 		A887D02229D2D055003715FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A887D02129D2D055003715FA /* Main.storyboard */; };
 		A887D02429D2D06B003715FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887D02329D2D06B003715FA /* MainViewController.swift */; };
-		A887D02629D2D18F003715FA /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = A887D02529D2D18F003715FA /* Fonts */; };
+		A8A3714229D41B3F00FF6E75 /* SUIT-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713C29D41B3F00FF6E75 /* SUIT-SemiBold.otf */; };
+		A8A3714329D41B3F00FF6E75 /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713D29D41B3F00FF6E75 /* SUIT-Regular.otf */; };
+		A8A3714429D41B3F00FF6E75 /* SUIT-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713E29D41B3F00FF6E75 /* SUIT-ExtraBold.otf */; };
+		A8A3714529D41B3F00FF6E75 /* SUIT-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713F29D41B3F00FF6E75 /* SUIT-Bold.otf */; };
+		A8A3714629D41B3F00FF6E75 /* SUIT-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3714029D41B3F00FF6E75 /* SUIT-Heavy.otf */; };
+		A8A3714729D41B3F00FF6E75 /* SUIT-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3714129D41B3F00FF6E75 /* SUIT-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +34,12 @@
 		A887D01529D03CC0003715FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A887D02129D2D055003715FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A887D02329D2D06B003715FA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		A887D02529D2D18F003715FA /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = ../../../Downloads/Fonts; sourceTree = "<group>"; };
+		A8A3713C29D41B3F00FF6E75 /* SUIT-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.otf"; sourceTree = "<group>"; };
+		A8A3713D29D41B3F00FF6E75 /* SUIT-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Regular.otf"; sourceTree = "<group>"; };
+		A8A3713E29D41B3F00FF6E75 /* SUIT-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-ExtraBold.otf"; sourceTree = "<group>"; };
+		A8A3713F29D41B3F00FF6E75 /* SUIT-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.otf"; sourceTree = "<group>"; };
+		A8A3714029D41B3F00FF6E75 /* SUIT-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Heavy.otf"; sourceTree = "<group>"; };
+		A8A3714129D41B3F00FF6E75 /* SUIT-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +76,7 @@
 				A887D01D29D2C5E2003715FA /* Controllers */,
 				A887D01C29D2C5C8003715FA /* ViewModels */,
 				A887D01B29D2C341003715FA /* Models */,
-				A887D02529D2D18F003715FA /* Fonts */,
+				A8A3713B29D41B1500FF6E75 /* Fonts */,
 				A887D00729D03CBF003715FA /* AppDelegate.swift */,
 				A887D00929D03CBF003715FA /* SceneDelegate.swift */,
 				A887D01029D03CC0003715FA /* Assets.xcassets */,
@@ -106,6 +116,19 @@
 				A887D02129D2D055003715FA /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A8A3713B29D41B1500FF6E75 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A8A3713F29D41B3F00FF6E75 /* SUIT-Bold.otf */,
+				A8A3713E29D41B3F00FF6E75 /* SUIT-ExtraBold.otf */,
+				A8A3714029D41B3F00FF6E75 /* SUIT-Heavy.otf */,
+				A8A3714129D41B3F00FF6E75 /* SUIT-Medium.otf */,
+				A8A3713D29D41B3F00FF6E75 /* SUIT-Regular.otf */,
+				A8A3713C29D41B3F00FF6E75 /* SUIT-SemiBold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,11 +189,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A887D02629D2D18F003715FA /* Fonts in Resources */,
+				A8A3714629D41B3F00FF6E75 /* SUIT-Heavy.otf in Resources */,
 				A887D01429D03CC0003715FA /* LaunchScreen.storyboard in Resources */,
+				A8A3714329D41B3F00FF6E75 /* SUIT-Regular.otf in Resources */,
 				A887D01129D03CC0003715FA /* Assets.xcassets in Resources */,
 				A887D00F29D03CBF003715FA /* Login.storyboard in Resources */,
+				A8A3714229D41B3F00FF6E75 /* SUIT-SemiBold.otf in Resources */,
+				A8A3714429D41B3F00FF6E75 /* SUIT-ExtraBold.otf in Resources */,
+				A8A3714729D41B3F00FF6E75 /* SUIT-Medium.otf in Resources */,
 				A887D02229D2D055003715FA /* Main.storyboard in Resources */,
+				A8A3714529D41B3F00FF6E75 /* SUIT-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

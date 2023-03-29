@@ -5,7 +5,6 @@
 //  Created by 김영현 on 2023/03/28.
 //
 
-import Foundation
 import UIKit
 
 class MainViewController: UIViewController {
@@ -16,6 +15,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         
         orderButton.layer.cornerRadius = 20
+        print(orderButton.titleLabel?.font)
         recentMenuButton.layer.cornerRadius = 20
         
     }
