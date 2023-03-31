@@ -60,7 +60,7 @@
         <!--Main-->
         <scene sceneID="Mdf-Xj-Sql">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MainVC" storyboardName="Main" id="Goh-mK-GXX" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MainNC" storyboardName="Main" id="Goh-mK-GXX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65l-8p-bYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="679" y="-2"/>

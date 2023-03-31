@@ -21,6 +21,8 @@
 		A8A3714529D41B3F00FF6E75 /* SUIT-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713F29D41B3F00FF6E75 /* SUIT-Bold.otf */; };
 		A8A3714629D41B3F00FF6E75 /* SUIT-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3714029D41B3F00FF6E75 /* SUIT-Heavy.otf */; };
 		A8A3714729D41B3F00FF6E75 /* SUIT-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3714129D41B3F00FF6E75 /* SUIT-Medium.otf */; };
+		A8A3714929D420E600FF6E75 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3714829D420E600FF6E75 /* OrderViewController.swift */; };
+		A8A3714B29D6A86C00FF6E75 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3714A29D6A86C00FF6E75 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		A8A3713F29D41B3F00FF6E75 /* SUIT-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.otf"; sourceTree = "<group>"; };
 		A8A3714029D41B3F00FF6E75 /* SUIT-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Heavy.otf"; sourceTree = "<group>"; };
 		A8A3714129D41B3F00FF6E75 /* SUIT-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.otf"; sourceTree = "<group>"; };
+		A8A3714829D420E600FF6E75 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		A8A3714A29D6A86C00FF6E75 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			children = (
 				A887D00B29D03CBF003715FA /* LoginViewController.swift */,
 				A887D02329D2D06B003715FA /* MainViewController.swift */,
+				A8A3714829D420E600FF6E75 /* OrderViewController.swift */,
+				A8A3714A29D6A86C00FF6E75 /* LocationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,7 +216,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A887D00C29D03CBF003715FA /* LoginViewController.swift in Sources */,
+				A8A3714929D420E600FF6E75 /* OrderViewController.swift in Sources */,
 				A887D00829D03CBF003715FA /* AppDelegate.swift in Sources */,
+				A8A3714B29D6A86C00FF6E75 /* LocationViewController.swift in Sources */,
 				A887D00A29D03CBF003715FA /* SceneDelegate.swift in Sources */,
 				A887D02429D2D06B003715FA /* MainViewController.swift in Sources */,
 			);
