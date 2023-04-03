@@ -19,7 +19,6 @@ class MainViewController: UIViewController {
         
         setNavigationBar()
         
-        // MARK: Buttons 기본 셋팅
         logoImageView.isAccessibilityElement = false
         orderButton.layer.cornerRadius = 20
         recentMenuButton.layer.cornerRadius = 20
@@ -48,13 +47,13 @@ class MainViewController: UIViewController {
         
     }
     
-    // MARK: 가게 위치 탐색 페이지로 이동
+    //가게 위치 탐색 페이지로 이동
     @objc func findLocation(_ sender: UIButton) {
         guard let locationVC = self.storyboard?.instantiateViewController(withIdentifier: "LocationVC") else { return }
         self.navigationController?.pushViewController(locationVC, animated: true)
     }
     
-    // MARK: 최근 주문 메뉴 리스트 페이지로 이동
+    //최근 주문 메뉴 리스트 페이지로 이동
     @objc func recentOrder(_ sender: UIButton) {
         guard let recentOrderVC = self.storyboard?.instantiateViewController(withIdentifier: "RecentOrderVC") else { return }
         self.navigationController?.pushViewController(recentOrderVC, animated: true)

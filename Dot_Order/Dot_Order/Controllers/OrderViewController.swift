@@ -18,7 +18,6 @@ class OrdreViewController: UIViewController {
         
         self.navigationItem.titleView = attributeTitleView()
         
-        // MARK: Buttons 기본 세팅
         shoppingListButton.layer.cornerRadius = 20
         shoppingListButton.accessibilityLabel = "장바구니"
         shoppingListButton.accessibilityHint = "현재 장바구니에 담긴 메뉴를 확인할 수 있는 페이지로 이동합니다"
