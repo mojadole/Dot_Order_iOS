@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PId-5r-AQ2">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SUIT-ExtraBold.otf">
+            <string>SUIT-ExtraBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" id="Y6W-OH-hqX" customClass="MainViewController" customModule="Dot_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-Sp-n6O">
+                                <rect key="frame" x="26" y="290.66666666666669" width="341" height="271.00000000000006"/>
+                                <color key="backgroundColor" name="main_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="height" multiplier="341:271" id="cg8-i4-gVk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="70"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="주문하기">
+                                    <color key="titleColor" name="background_color"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_white_image" translatesAutoresizingMaskIntoConstraints="NO" id="7AC-m4-rlb">
+                                <rect key="frame" x="77" y="103" width="239" height="127.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7AC-m4-rlb" secondAttribute="height" multiplier="15:8" id="uZJ-9Y-7i9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3a-gG-8P5">
+                                <rect key="frame" x="26" y="611.66666666666663" width="341" height="107"/>
+                                <color key="backgroundColor" name="main_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g3a-gG-8P5" secondAttribute="height" multiplier="341:107" id="Uef-Uu-xq0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="48"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="최근 주문 내역">
+                                    <color key="titleColor" name="background_color"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="background_color"/>
+                        <constraints>
+                            <constraint firstItem="0Ds-Sp-n6O" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="1Pt-53-sod"/>
+                            <constraint firstItem="0Ds-Sp-n6O" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="26" id="Nfa-cO-apa"/>
+                            <constraint firstItem="7AC-m4-rlb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RSh-dd-VMo"/>
+                            <constraint firstItem="7AC-m4-rlb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gll-Aw-0Z9"/>
+                            <constraint firstItem="0Ds-Sp-n6O" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hbx-MH-chY"/>
+                            <constraint firstItem="g3a-gG-8P5" firstAttribute="top" secondItem="0Ds-Sp-n6O" secondAttribute="bottom" constant="50" id="j4h-1b-ldw"/>
+                            <constraint firstItem="7AC-m4-rlb" firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="width" multiplier="0.7" id="k2B-zO-AqU"/>
+                            <constraint firstItem="g3a-gG-8P5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rzj-gI-pZs"/>
+                            <constraint firstItem="g3a-gG-8P5" firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="width" id="xdb-se-Cuw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EYV-b0-uWU"/>
+                    <connections>
+                        <outlet property="orderButton" destination="0Ds-Sp-n6O" id="N6D-c5-p4M"/>
+                        <outlet property="recentMenuButton" destination="g3a-gG-8P5" id="wHl-MN-rkz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="4"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="g3A-bI-vCk">
+            <objects>
+                <viewController storyboardIdentifier="LocationVC" id="Xjd-bm-j3C" customClass="LocationViewController" customModule="Dot_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RHz-h8-oeF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zt2-Jm-jwG">
+                                <rect key="frame" x="100" y="329.66666666666669" width="193" height="193.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zt2-Jm-jwG" secondAttribute="height" multiplier="1:1" id="czr-bx-BYO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ezf-5X-r4E"/>
+                        <color key="backgroundColor" name="background_color"/>
+                        <constraints>
+                            <constraint firstItem="zt2-Jm-jwG" firstAttribute="centerX" secondItem="RHz-h8-oeF" secondAttribute="centerX" id="SYZ-Qm-xAe"/>
+                            <constraint firstItem="zt2-Jm-jwG" firstAttribute="centerY" secondItem="RHz-h8-oeF" secondAttribute="centerY" id="WGU-NB-fBE"/>
+                            <constraint firstItem="zt2-Jm-jwG" firstAttribute="leading" secondItem="Ezf-5X-r4E" secondAttribute="leading" constant="100" id="xQr-dK-Rhh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWf-C8-gaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780.916030534351" y="3.5211267605633805"/>
+        </scene>
+        <!--Ordre View Controller-->
+        <scene sceneID="Drx-Kn-L5i">
+            <objects>
+                <viewController storyboardIdentifier="OrderVC" id="haM-vT-Arq" customClass="OrdreViewController" customModule="Dot_Order" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E6B-vm-t62">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speak_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zYv-Rw-eLc">
+                                <rect key="frame" x="100" y="329.66666666666669" width="193" height="193.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zYv-Rw-eLc" secondAttribute="height" multiplier="1:1" id="O69-cE-AIy"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfG-Ms-PTD">
+                                <rect key="frame" x="26" y="671" width="341" height="107"/>
+                                <color key="backgroundColor" name="main_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zfG-Ms-PTD" secondAttribute="height" multiplier="341:107" id="rhl-JD-ndm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="64"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="장바구니">
+                                    <color key="titleColor" name="background_color"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dgC-QT-WCe"/>
+                        <color key="backgroundColor" name="background_color"/>
+                        <constraints>
+                            <constraint firstItem="zYv-Rw-eLc" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="5Dt-4W-lfn"/>
+                            <constraint firstItem="zYv-Rw-eLc" firstAttribute="centerY" secondItem="E6B-vm-t62" secondAttribute="centerY" id="ODJ-37-bXT"/>
+                            <constraint firstItem="zfG-Ms-PTD" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="PcP-aQ-F05"/>
+                            <constraint firstItem="zfG-Ms-PTD" firstAttribute="leading" secondItem="dgC-QT-WCe" secondAttribute="leading" constant="26" id="izz-70-yJX"/>
+                            <constraint firstItem="zYv-Rw-eLc" firstAttribute="leading" secondItem="dgC-QT-WCe" secondAttribute="leading" constant="100" id="kiU-OJ-XCk"/>
+                            <constraint firstItem="dgC-QT-WCe" firstAttribute="bottom" secondItem="zfG-Ms-PTD" secondAttribute="bottom" constant="40" id="xr7-fH-TQ6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="shoppingListButton" destination="zfG-Ms-PTD" id="P8L-82-wRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bb-JO-WGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2566" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NeN-pr-dBe">
+            <objects>
+                <navigationController storyboardIdentifier="MainNC" automaticallyAdjustsScrollViewInsets="NO" id="PId-5r-AQ2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N4G-iz-xW8">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="NNG-A4-2fR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGI-8P-0aY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.877862595419849" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location_icon" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="logo_white_image" width="357.66665649414062" height="170.66667175292969"/>
+        <image name="speak_icon" width="170.66667175292969" height="170.66667175292969"/>
+        <namedColor name="background_color">
+            <color red="0.15700000524520874" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main_color">
+            <color red="1" green="0.83499997854232788" blue="0.23100000619888306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
