@@ -18,6 +18,7 @@ class LocationViewController: UIViewController {
         
     }
     
+    // MARK: NavigationBar Title 세팅
     private func attributeTitleView() -> UIView {
         
         let titleLabel: UILabel = UILabel()

@@ -23,6 +23,7 @@ class ShoppingListViewController: UIViewController {
         shoppingListTableView.accessibilityTraits = .none
     }
     
+    // MARK: Navigation Bar Title 세팅
     private func attributeTitleView() -> UIView {
         
         let titleLabel: UILabel = UILabel()
@@ -40,6 +41,7 @@ class ShoppingListViewController: UIViewController {
     
 }
 
+// MARK: TableView 세팅
 extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

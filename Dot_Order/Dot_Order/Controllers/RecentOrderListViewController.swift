@@ -24,6 +24,7 @@ class RecentOrderListViewController: UIViewController {
         
     }
     
+    // MARK: Navigation Bar Title 세팅
     private func attributeTitleView() -> UIView {
         
         let titleLabel: UILabel = UILabel()
@@ -41,6 +42,7 @@ class RecentOrderListViewController: UIViewController {
     
 }
 
+// MARK: TableView 세팅
 extension RecentOrderListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
