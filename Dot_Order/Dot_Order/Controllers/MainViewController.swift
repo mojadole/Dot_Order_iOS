@@ -37,7 +37,9 @@ class MainViewController: UIViewController {
     
     private func setNavigationBar() {
         
-        let backButtonImage: UIImage = UIImage(named: "back_icon")!.resized(to: CGSize(width: 46, height: 46))
+        let backButtonImage: UIImage = UIImage(named: "back_icon")!
+            .resized(to: CGSize(width: 40, height: 40))
+            .withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
         self.navigationController?.navigationBar.backIndicatorImage = backButtonImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButtonImage
         self.navigationController?.navigationBar.backItem?.title = ""
@@ -59,8 +61,16 @@ class MainViewController: UIViewController {
 // MARK: UIImage resize 함수
 extension UIImage {
     func resized(to size: CGSize) -> UIImage {
-        return UIGraphicsImageRenderer(size: size).image { _ in
-            draw(in: CGRect(origin: .zero, size: size))
-        }
+        let newWidth = size.width
+        let newHeight = size.height
+        let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        self.draw(in: newImageRect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysOriginal)
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
+    
+    
 }

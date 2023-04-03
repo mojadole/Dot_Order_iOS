@@ -14,5 +14,22 @@ class LocationViewController: UIViewController {
         
         super.viewDidLoad()
         
+        self.navigationItem.titleView = attributeTitleView()
+        
+    }
+    
+    private func attributeTitleView() -> UIView {
+        
+        let titleLabel: UILabel = UILabel()
+        let naviTitle: NSMutableAttributedString = NSMutableAttributedString(
+            string: "가게 위치 탐색",
+            attributes: [
+            .foregroundColor: UIColor(named: "main_color")!,
+            .font: UIFont(name: "SUIT-ExtraBold", size: 40)!
+        ])
+        
+        titleLabel.attributedText = naviTitle
+        
+        return titleLabel
     }
 }

@@ -16,9 +16,26 @@ class ShoppingListViewController: UIViewController {
         
         super.viewDidLoad()
         
+        self.navigationItem.titleView = attributeTitleView()
+        
         shoppingListTableView.accessibilityLabel = "장바구니 리스트"
         shoppingListTableView.accessibilityHint = "현재 장바구니에 담긴 메뉴들 리스트입니다"
         shoppingListTableView.accessibilityTraits = .none
+    }
+    
+    private func attributeTitleView() -> UIView {
+        
+        let titleLabel: UILabel = UILabel()
+        let naviTitle: NSMutableAttributedString = NSMutableAttributedString(
+            string: "장바구니",
+            attributes: [
+            .foregroundColor: UIColor(named: "main_color")!,
+            .font: UIFont(name: "SUIT-ExtraBold", size: 40)!
+        ])
+        
+        titleLabel.attributedText = naviTitle
+        
+        return titleLabel
     }
     
 }
