@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="934" y="450"/>
         </scene>
-        <!--Ordre View Controller-->
+        <!--Order View Controller-->
         <scene sceneID="Drx-Kn-L5i">
             <objects>
-                <viewController storyboardIdentifier="OrderVC" id="haM-vT-Arq" customClass="OrdreViewController" customModule="Dot_Order" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderVC" id="haM-vT-Arq" customClass="OrderViewController" customModule="Dot_Order" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E6B-vm-t62">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

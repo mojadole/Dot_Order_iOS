@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class OrdreViewController: UIViewController {
+class OrderViewController: UIViewController {
     
     @IBOutlet weak var shoppingListButton: UIButton!
     

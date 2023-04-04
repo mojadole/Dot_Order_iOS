@@ -17,10 +17,17 @@ class ShoppingListViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.titleView = attributeTitleView()
+        self.navigationController?.navigationBar.topItem?.title = ""
         
         shoppingListTableView.accessibilityLabel = "장바구니 리스트"
         shoppingListTableView.accessibilityHint = "현재 장바구니에 담긴 메뉴들 리스트입니다"
         shoppingListTableView.accessibilityTraits = .none
+    
+        registerXib()
+        
+        shoppingListTableView.dataSource = self
+        shoppingListTableView.delegate = self
+    
     }
     
     // MARK: Navigation Bar Title 세팅
@@ -39,16 +46,31 @@ class ShoppingListViewController: UIViewController {
         return titleLabel
     }
     
+    // MARK: TableViewCell Nib 등록
+    private func registerXib() {
+        let nibName = UINib(nibName: "ShoppingListTableViewCell", bundle: nil)
+        self.shoppingListTableView.register(nibName, forCellReuseIdentifier: "shoppingListCell")
+    }
+    
 }
 
 // MARK: TableView 세팅
 extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 141
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingListTVC", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingListCell", for: indexPath) as! ShoppingListTableViewCell
+        
+        cell.countLabel.text = "1"
+        cell.menuNameLabel.text = "메뉴 \(indexPath.row)"
+        cell.backgroundColor = .clear
+        cell.selectionStyle = .none
         
         return cell
     }

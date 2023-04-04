@@ -27,8 +27,10 @@
 		A8A3714F29DA9F3F00FF6E75 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3714E29DA9F3F00FF6E75 /* ShoppingListViewController.swift */; };
 		A8A3715129DAA0FA00FF6E75 /* RecentOrderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A3715029DAA0FA00FF6E75 /* RecentOrderList.storyboard */; };
 		A8A3715329DAA11900FF6E75 /* RecentOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3715229DAA11900FF6E75 /* RecentOrderListViewController.swift */; };
-		A8A3715629DAA7FD00FF6E75 /* RecentOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3715529DAA7FD00FF6E75 /* RecentOrderTableViewCell.swift */; };
-		A8A3715829DAA82500FF6E75 /* ShoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3715729DAA82500FF6E75 /* ShoppingListTableViewCell.swift */; };
+		A8A3715F29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3715D29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift */; };
+		A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */; };
+		A8A3716329DC272800FF6E75 /* RecentOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */; };
+		A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,8 +56,10 @@
 		A8A3714E29DA9F3F00FF6E75 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		A8A3715029DAA0FA00FF6E75 /* RecentOrderList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentOrderList.storyboard; sourceTree = "<group>"; };
 		A8A3715229DAA11900FF6E75 /* RecentOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentOrderListViewController.swift; sourceTree = "<group>"; };
-		A8A3715529DAA7FD00FF6E75 /* RecentOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentOrderTableViewCell.swift; sourceTree = "<group>"; };
-		A8A3715729DAA82500FF6E75 /* ShoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewCell.swift; sourceTree = "<group>"; };
+		A8A3715D29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewCell.swift; sourceTree = "<group>"; };
+		A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingListTableViewCell.xib; sourceTree = "<group>"; };
+		A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentOrderTableViewCell.swift; sourceTree = "<group>"; };
+		A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentOrderTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +161,10 @@
 		A8A3715429DAA7B600FF6E75 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A8A3715529DAA7FD00FF6E75 /* RecentOrderTableViewCell.swift */,
-				A8A3715729DAA82500FF6E75 /* ShoppingListTableViewCell.swift */,
+				A8A3715D29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift */,
+				A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */,
+				A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */,
+				A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -222,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A3714629D41B3F00FF6E75 /* SUIT-Heavy.otf in Resources */,
+				A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */,
+				A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */,
 				A8A3714D29DA9F0F00FF6E75 /* ShoppingList.storyboard in Resources */,
 				A887D01429D03CC0003715FA /* LaunchScreen.storyboard in Resources */,
 				A8A3714329D41B3F00FF6E75 /* SUIT-Regular.otf in Resources */,
@@ -243,16 +251,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8A3715629DAA7FD00FF6E75 /* RecentOrderTableViewCell.swift in Sources */,
 				A887D00C29D03CBF003715FA /* LoginViewController.swift in Sources */,
 				A8A3714929D420E600FF6E75 /* OrderViewController.swift in Sources */,
 				A887D00829D03CBF003715FA /* AppDelegate.swift in Sources */,
 				A8A3714F29DA9F3F00FF6E75 /* ShoppingListViewController.swift in Sources */,
-				A8A3715829DAA82500FF6E75 /* ShoppingListTableViewCell.swift in Sources */,
 				A8A3714B29D6A86C00FF6E75 /* LocationViewController.swift in Sources */,
 				A887D00A29D03CBF003715FA /* SceneDelegate.swift in Sources */,
 				A8A3715329DAA11900FF6E75 /* RecentOrderListViewController.swift in Sources */,
 				A887D02429D2D06B003715FA /* MainViewController.swift in Sources */,
+				A8A3715F29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift in Sources */,
+				A8A3716329DC272800FF6E75 /* RecentOrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

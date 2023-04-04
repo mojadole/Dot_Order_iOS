@@ -22,6 +22,11 @@ class RecentOrderListViewController: UIViewController {
         menuTableView.accessibilityHint = "최근에 주문한 메뉴 리스트입니다"
         menuTableView.accessibilityTraits = .none
         
+        registerXib()
+        
+        menuTableView.delegate = self
+        menuTableView.dataSource = self
+        
     }
     
     // MARK: Navigation Bar Title 세팅
@@ -40,16 +45,31 @@ class RecentOrderListViewController: UIViewController {
         return titleLabel
     }
     
+    // MARK: TableViewCell Nib 등록
+    private func registerXib() {
+        let nibName = UINib(nibName: "RecentOrderTableViewCell", bundle: nil)
+        self.menuTableView.register(nibName, forCellReuseIdentifier: "recentOrderCell")
+    }
+    
 }
 
 // MARK: TableView 세팅
 extension RecentOrderListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 141
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecentOrderTVC", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recentOrderCell", for: indexPath) as! RecentOrderTableViewCell
+        
+        cell.shopNameLabel.text = "가게 \(indexPath.row)"
+        cell.menuNameLabel.text = "메뉴 \(indexPath.row)"
+        cell.backgroundColor = .clear
+        cell.selectionStyle = .none
         
         return cell
     }
