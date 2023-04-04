@@ -23,6 +23,14 @@
 		A8A3714729D41B3F00FF6E75 /* SUIT-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3714129D41B3F00FF6E75 /* SUIT-Medium.otf */; };
 		A8A3714929D420E600FF6E75 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3714829D420E600FF6E75 /* OrderViewController.swift */; };
 		A8A3714B29D6A86C00FF6E75 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3714A29D6A86C00FF6E75 /* LocationViewController.swift */; };
+		A8A3714D29DA9F0F00FF6E75 /* ShoppingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A3714C29DA9F0F00FF6E75 /* ShoppingList.storyboard */; };
+		A8A3714F29DA9F3F00FF6E75 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3714E29DA9F3F00FF6E75 /* ShoppingListViewController.swift */; };
+		A8A3715129DAA0FA00FF6E75 /* RecentOrderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A3715029DAA0FA00FF6E75 /* RecentOrderList.storyboard */; };
+		A8A3715329DAA11900FF6E75 /* RecentOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3715229DAA11900FF6E75 /* RecentOrderListViewController.swift */; };
+		A8A3715F29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3715D29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift */; };
+		A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */; };
+		A8A3716329DC272800FF6E75 /* RecentOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */; };
+		A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +52,14 @@
 		A8A3714129D41B3F00FF6E75 /* SUIT-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.otf"; sourceTree = "<group>"; };
 		A8A3714829D420E600FF6E75 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		A8A3714A29D6A86C00FF6E75 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		A8A3714C29DA9F0F00FF6E75 /* ShoppingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShoppingList.storyboard; sourceTree = "<group>"; };
+		A8A3714E29DA9F3F00FF6E75 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		A8A3715029DAA0FA00FF6E75 /* RecentOrderList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentOrderList.storyboard; sourceTree = "<group>"; };
+		A8A3715229DAA11900FF6E75 /* RecentOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentOrderListViewController.swift; sourceTree = "<group>"; };
+		A8A3715D29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewCell.swift; sourceTree = "<group>"; };
+		A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingListTableViewCell.xib; sourceTree = "<group>"; };
+		A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentOrderTableViewCell.swift; sourceTree = "<group>"; };
+		A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentOrderTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +96,7 @@
 				A887D01D29D2C5E2003715FA /* Controllers */,
 				A887D01C29D2C5C8003715FA /* ViewModels */,
 				A887D01B29D2C341003715FA /* Models */,
+				A8A3715429DAA7B600FF6E75 /* Cells */,
 				A8A3713B29D41B1500FF6E75 /* Fonts */,
 				A887D00729D03CBF003715FA /* AppDelegate.swift */,
 				A887D00929D03CBF003715FA /* SceneDelegate.swift */,
@@ -109,8 +126,10 @@
 			children = (
 				A887D00B29D03CBF003715FA /* LoginViewController.swift */,
 				A887D02329D2D06B003715FA /* MainViewController.swift */,
-				A8A3714829D420E600FF6E75 /* OrderViewController.swift */,
 				A8A3714A29D6A86C00FF6E75 /* LocationViewController.swift */,
+				A8A3714829D420E600FF6E75 /* OrderViewController.swift */,
+				A8A3714E29DA9F3F00FF6E75 /* ShoppingListViewController.swift */,
+				A8A3715229DAA11900FF6E75 /* RecentOrderListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,6 +139,8 @@
 			children = (
 				A887D00D29D03CBF003715FA /* Login.storyboard */,
 				A887D02129D2D055003715FA /* Main.storyboard */,
+				A8A3714C29DA9F0F00FF6E75 /* ShoppingList.storyboard */,
+				A8A3715029DAA0FA00FF6E75 /* RecentOrderList.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +156,17 @@
 				A8A3713C29D41B3F00FF6E75 /* SUIT-SemiBold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A8A3715429DAA7B600FF6E75 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A8A3715D29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift */,
+				A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */,
+				A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */,
+				A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A3714629D41B3F00FF6E75 /* SUIT-Heavy.otf in Resources */,
+				A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */,
+				A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */,
+				A8A3714D29DA9F0F00FF6E75 /* ShoppingList.storyboard in Resources */,
 				A887D01429D03CC0003715FA /* LaunchScreen.storyboard in Resources */,
 				A8A3714329D41B3F00FF6E75 /* SUIT-Regular.otf in Resources */,
 				A887D01129D03CC0003715FA /* Assets.xcassets in Resources */,
@@ -204,6 +239,7 @@
 				A8A3714429D41B3F00FF6E75 /* SUIT-ExtraBold.otf in Resources */,
 				A8A3714729D41B3F00FF6E75 /* SUIT-Medium.otf in Resources */,
 				A887D02229D2D055003715FA /* Main.storyboard in Resources */,
+				A8A3715129DAA0FA00FF6E75 /* RecentOrderList.storyboard in Resources */,
 				A8A3714529D41B3F00FF6E75 /* SUIT-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,9 +254,13 @@
 				A887D00C29D03CBF003715FA /* LoginViewController.swift in Sources */,
 				A8A3714929D420E600FF6E75 /* OrderViewController.swift in Sources */,
 				A887D00829D03CBF003715FA /* AppDelegate.swift in Sources */,
+				A8A3714F29DA9F3F00FF6E75 /* ShoppingListViewController.swift in Sources */,
 				A8A3714B29D6A86C00FF6E75 /* LocationViewController.swift in Sources */,
 				A887D00A29D03CBF003715FA /* SceneDelegate.swift in Sources */,
+				A8A3715329DAA11900FF6E75 /* RecentOrderListViewController.swift in Sources */,
 				A887D02429D2D06B003715FA /* MainViewController.swift in Sources */,
+				A8A3715F29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift in Sources */,
+				A8A3716329DC272800FF6E75 /* RecentOrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

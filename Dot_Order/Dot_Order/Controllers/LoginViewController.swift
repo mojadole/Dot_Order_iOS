@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
         
     }
 
+    // MARK: 카카오 로그인 버튼
     @IBAction func kakaoLoginButton(_ sender: Any) {
         guard let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainNC") else { return }
         mainViewController.modalPresentationStyle = .fullScreen
