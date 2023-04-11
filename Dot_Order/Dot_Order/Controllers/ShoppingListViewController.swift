@@ -11,10 +11,15 @@ import UIKit
 class ShoppingListViewController: UIViewController {
     
     @IBOutlet weak var shoppingListTableView: UITableView!
+    @IBOutlet weak var modifyButton: UIButton!
+    @IBOutlet weak var payButton: UIButton!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        modifyButton.layer.cornerRadius = 15
+        payButton.layer.cornerRadius = 15
         
         self.navigationItem.titleView = attributeTitleView()
         self.navigationController?.navigationBar.topItem?.title = ""
@@ -50,6 +55,14 @@ class ShoppingListViewController: UIViewController {
     private func registerXib() {
         let nibName = UINib(nibName: "ShoppingListTableViewCell", bundle: nil)
         self.shoppingListTableView.register(nibName, forCellReuseIdentifier: "shoppingListCell")
+    }
+    
+    @IBAction func modifyBtnClicked(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func payBtnClicked(_ sender: Any) {
+        print("결제 버튼 클릭")
     }
     
 }

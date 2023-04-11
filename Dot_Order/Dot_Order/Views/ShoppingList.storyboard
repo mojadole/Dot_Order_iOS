@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SUIT-ExtraBold.otf">
+            <string>SUIT-ExtraBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Shopping List View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -17,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-hN-JrJ">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="624.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="133" id="ky7-gV-Oxj" customClass="ShoppingListTableViewCell" customModule="Dot_Order" customModuleProvider="target">
@@ -30,17 +36,57 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qOF-IF-1nX">
+                                <rect key="frame" x="30" y="703.66666666666663" width="333" height="99.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMp-RL-cDF">
+                                        <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="99.333333333333329"/>
+                                        <color key="backgroundColor" name="main_color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="PMp-RL-cDF" secondAttribute="height" multiplier="160:105" id="bdv-U1-lfe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="수정">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="modifyBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v9y-uV-rIk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRk-Dz-o10">
+                                        <rect key="frame" x="181.66666666666663" y="0.0" width="151.33333333333337" height="99.333333333333329"/>
+                                        <color key="backgroundColor" name="main_color"/>
+                                        <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="결제">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="payBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bom-fB-TqE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mRk-Dz-o10" firstAttribute="width" secondItem="mRk-Dz-o10" secondAttribute="height" multiplier="160:105" id="EbK-qO-8Vz"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="background_color"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="QDe-hN-JrJ" secondAttribute="bottom" id="B7I-w3-ttN"/>
+                            <constraint firstItem="qOF-IF-1nX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="0qy-3h-I1y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qOF-IF-1nX" secondAttribute="bottom" constant="15" id="Glg-a6-shR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QDe-hN-JrJ" secondAttribute="trailing" id="Pkl-Zj-ma5"/>
                             <constraint firstItem="QDe-hN-JrJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="WDT-d3-c9C"/>
                             <constraint firstItem="QDe-hN-JrJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="X1M-NR-DGo"/>
+                            <constraint firstItem="qOF-IF-1nX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qsB-SX-5xa"/>
+                            <constraint firstItem="qOF-IF-1nX" firstAttribute="top" secondItem="QDe-hN-JrJ" secondAttribute="bottom" constant="20" id="u7b-2U-kWE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="modifyButton" destination="PMp-RL-cDF" id="xqq-PN-sJF"/>
+                        <outlet property="payButton" destination="mRk-Dz-o10" id="fAb-Ns-YF8"/>
                         <outlet property="shoppingListTableView" destination="QDe-hN-JrJ" id="euq-Rb-jA9"/>
                     </connections>
                 </viewController>
@@ -52,6 +98,9 @@
     <resources>
         <namedColor name="background_color">
             <color red="0.15700000524520874" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main_color">
+            <color red="1" green="0.83499997854232788" blue="0.23100000619888306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

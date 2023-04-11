@@ -18,8 +18,8 @@ class EvaluationViewController: UIViewController {
         super.viewDidLoad()
         
         popupView.layer.cornerRadius = 20
-        yesButton.layer.cornerRadius = 20
-        noButton.layer.cornerRadius = 20
+        yesButton.layer.cornerRadius = 15
+        noButton.layer.cornerRadius = 15
         
     }
     
