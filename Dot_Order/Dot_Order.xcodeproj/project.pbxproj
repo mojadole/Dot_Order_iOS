@@ -15,6 +15,8 @@
 		A887D01429D03CC0003715FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A887D01229D03CC0003715FA /* LaunchScreen.storyboard */; };
 		A887D02229D2D055003715FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A887D02129D2D055003715FA /* Main.storyboard */; };
 		A887D02429D2D06B003715FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887D02329D2D06B003715FA /* MainViewController.swift */; };
+		A88E652829E53BED00749F03 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E652729E53BED00749F03 /* EvaluationViewController.swift */; };
+		A88E652A29E53BFC00749F03 /* Evaluation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88E652929E53BFC00749F03 /* Evaluation.storyboard */; };
 		A8A3714229D41B3F00FF6E75 /* SUIT-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713C29D41B3F00FF6E75 /* SUIT-SemiBold.otf */; };
 		A8A3714329D41B3F00FF6E75 /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713D29D41B3F00FF6E75 /* SUIT-Regular.otf */; };
 		A8A3714429D41B3F00FF6E75 /* SUIT-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713E29D41B3F00FF6E75 /* SUIT-ExtraBold.otf */; };
@@ -44,6 +46,8 @@
 		A887D01529D03CC0003715FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A887D02129D2D055003715FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A887D02329D2D06B003715FA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A88E652729E53BED00749F03 /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
+		A88E652929E53BFC00749F03 /* Evaluation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Evaluation.storyboard; sourceTree = "<group>"; };
 		A8A3713C29D41B3F00FF6E75 /* SUIT-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.otf"; sourceTree = "<group>"; };
 		A8A3713D29D41B3F00FF6E75 /* SUIT-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Regular.otf"; sourceTree = "<group>"; };
 		A8A3713E29D41B3F00FF6E75 /* SUIT-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				A8A3714829D420E600FF6E75 /* OrderViewController.swift */,
 				A8A3714E29DA9F3F00FF6E75 /* ShoppingListViewController.swift */,
 				A8A3715229DAA11900FF6E75 /* RecentOrderListViewController.swift */,
+				A88E652729E53BED00749F03 /* EvaluationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 				A887D02129D2D055003715FA /* Main.storyboard */,
 				A8A3714C29DA9F0F00FF6E75 /* ShoppingList.storyboard */,
 				A8A3715029DAA0FA00FF6E75 /* RecentOrderList.storyboard */,
+				A88E652929E53BFC00749F03 /* Evaluation.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88E652A29E53BFC00749F03 /* Evaluation.storyboard in Resources */,
 				A8A3714629D41B3F00FF6E75 /* SUIT-Heavy.otf in Resources */,
 				A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */,
 				A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */,
@@ -257,6 +264,7 @@
 				A8A3714F29DA9F3F00FF6E75 /* ShoppingListViewController.swift in Sources */,
 				A8A3714B29D6A86C00FF6E75 /* LocationViewController.swift in Sources */,
 				A887D00A29D03CBF003715FA /* SceneDelegate.swift in Sources */,
+				A88E652829E53BED00749F03 /* EvaluationViewController.swift in Sources */,
 				A8A3715329DAA11900FF6E75 /* RecentOrderListViewController.swift in Sources */,
 				A887D02429D2D06B003715FA /* MainViewController.swift in Sources */,
 				A8A3715F29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift in Sources */,

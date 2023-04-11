@@ -63,6 +63,13 @@ extension RecentOrderListViewController: UITableViewDelegate, UITableViewDataSou
         return 141
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let evaluationVC = self.storyboard?.instantiateViewController(withIdentifier: "EvaluationVC") else { return }
+        evaluationVC.modalPresentationStyle = .overCurrentContext
+        evaluationVC.modalTransitionStyle = .crossDissolve
+        present(evaluationVC, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recentOrderCell", for: indexPath) as! RecentOrderTableViewCell
         
