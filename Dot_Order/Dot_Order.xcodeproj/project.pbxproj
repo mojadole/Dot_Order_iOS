@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80CDC7029F26E51003E7C01 /* Kommunicate in Frameworks */ = {isa = PBXBuildFile; productRef = A80CDC6F29F26E51003E7C01 /* Kommunicate */; };
 		A887D00829D03CBF003715FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887D00729D03CBF003715FA /* AppDelegate.swift */; };
 		A887D00A29D03CBF003715FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887D00929D03CBF003715FA /* SceneDelegate.swift */; };
 		A887D00C29D03CBF003715FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887D00B29D03CBF003715FA /* LoginViewController.swift */; };
@@ -71,17 +72,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A80CDC7029F26E51003E7C01 /* Kommunicate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1A10F1ABC7F8A1C5949D95C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A887CFFB29D03CBF003715FA = {
 			isa = PBXGroup;
 			children = (
 				A887D00629D03CBF003715FA /* Dot_Order */,
 				A887D00529D03CBF003715FA /* Products */,
+				A1A10F1ABC7F8A1C5949D95C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +201,9 @@
 			dependencies = (
 			);
 			name = Dot_Order;
+			packageProductDependencies = (
+				A80CDC6F29F26E51003E7C01 /* Kommunicate */,
+			);
 			productName = Dot_Order;
 			productReference = A887D00429D03CBF003715FA /* Dot_Order.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +232,9 @@
 				Base,
 			);
 			mainGroup = A887CFFB29D03CBF003715FA;
+			packageReferences = (
+				A80CDC6E29F26E51003E7C01 /* XCRemoteSwiftPackageReference "Kommunicate-iOS-SDK" */,
+			);
 			productRefGroup = A887D00529D03CBF003715FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -486,6 +502,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A80CDC6E29F26E51003E7C01 /* XCRemoteSwiftPackageReference "Kommunicate-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kommunicate-io/Kommunicate-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A80CDC6F29F26E51003E7C01 /* Kommunicate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A80CDC6E29F26E51003E7C01 /* XCRemoteSwiftPackageReference "Kommunicate-iOS-SDK" */;
+			productName = Kommunicate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A887CFFC29D03CBF003715FA /* Project object */;
 }

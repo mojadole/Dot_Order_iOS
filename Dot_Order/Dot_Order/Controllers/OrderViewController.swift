@@ -7,10 +7,12 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class OrderViewController: UIViewController {
     
     @IBOutlet weak var shoppingListButton: UIButton!
+    @IBOutlet weak var responseLabel: UILabel!
     
     override func viewDidLoad() {
         
@@ -23,6 +25,22 @@ class OrderViewController: UIViewController {
         shoppingListButton.accessibilityHint = "현재 장바구니에 담긴 메뉴를 확인할 수 있는 페이지로 이동합니다"
         shoppingListButton.accessibilityTraits = .button
         shoppingListButton.addTarget(self, action: #selector(shoppingList(_:)), for: .touchUpInside)
+        
+    }
+    
+    // MARK: dialogFlow
+    
+    let speechSynthesizer = AVSpeechSynthesizer()
+    
+    func speechAndText(text: String) {
+        let speechUtterance = AVSpeechUtterance(string: text)
+        speechSynthesizer.speak(speechUtterance)
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseInOut, animations: {
+            self.responseLabel.text = text
+        }, completion: nil)
+    }
+    
+    @IBAction func speakingButtonClicked(_ sender: Any) {
         
     }
     

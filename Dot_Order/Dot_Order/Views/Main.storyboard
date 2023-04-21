@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PId-5r-AQ2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PId-5r-AQ2">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -147,19 +148,40 @@
                                     <color key="titleColor" name="background_color"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대답" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4T-cv-moo">
+                                <rect key="frame" x="161.66666666666666" y="179.66666666666666" width="70" height="50"/>
+                                <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIa-Up-prl">
+                                <rect key="frame" x="100" y="329.66666666666669" width="193" height="193.00000000000006"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="speakingButtonClicked:" destination="haM-vT-Arq" eventType="touchUpInside" id="6I6-FU-Gkz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dgC-QT-WCe"/>
                         <color key="backgroundColor" name="background_color"/>
                         <constraints>
+                            <constraint firstItem="UIa-Up-prl" firstAttribute="leading" secondItem="zYv-Rw-eLc" secondAttribute="leading" id="0pT-m1-BTy"/>
                             <constraint firstItem="zYv-Rw-eLc" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="5Dt-4W-lfn"/>
+                            <constraint firstItem="UIa-Up-prl" firstAttribute="height" secondItem="zYv-Rw-eLc" secondAttribute="height" id="L4K-df-zQ6"/>
                             <constraint firstItem="zYv-Rw-eLc" firstAttribute="centerY" secondItem="E6B-vm-t62" secondAttribute="centerY" id="ODJ-37-bXT"/>
                             <constraint firstItem="zfG-Ms-PTD" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="PcP-aQ-F05"/>
+                            <constraint firstItem="UIa-Up-prl" firstAttribute="top" secondItem="zYv-Rw-eLc" secondAttribute="top" id="PsR-iE-WKb"/>
+                            <constraint firstItem="J4T-cv-moo" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="ZWA-ve-IT8"/>
+                            <constraint firstItem="zYv-Rw-eLc" firstAttribute="top" secondItem="J4T-cv-moo" secondAttribute="bottom" constant="100" id="akL-Ab-aOM"/>
                             <constraint firstItem="zfG-Ms-PTD" firstAttribute="leading" secondItem="dgC-QT-WCe" secondAttribute="leading" constant="26" id="izz-70-yJX"/>
                             <constraint firstItem="zYv-Rw-eLc" firstAttribute="leading" secondItem="dgC-QT-WCe" secondAttribute="leading" constant="100" id="kiU-OJ-XCk"/>
+                            <constraint firstItem="UIa-Up-prl" firstAttribute="width" secondItem="zYv-Rw-eLc" secondAttribute="width" id="xnv-Vj-ULR"/>
                             <constraint firstItem="dgC-QT-WCe" firstAttribute="bottom" secondItem="zfG-Ms-PTD" secondAttribute="bottom" constant="40" id="xr7-fH-TQ6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="responseLabel" destination="J4T-cv-moo" id="5EE-gM-Wsk"/>
                         <outlet property="shoppingListButton" destination="zfG-Ms-PTD" id="P8L-82-wRZ"/>
                     </connections>
                 </viewController>
