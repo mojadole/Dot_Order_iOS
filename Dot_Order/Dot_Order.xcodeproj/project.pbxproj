@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A80CDC7029F26E51003E7C01 /* Kommunicate in Frameworks */ = {isa = PBXBuildFile; productRef = A80CDC6F29F26E51003E7C01 /* Kommunicate */; };
 		A887D00829D03CBF003715FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887D00729D03CBF003715FA /* AppDelegate.swift */; };
 		A887D00A29D03CBF003715FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887D00929D03CBF003715FA /* SceneDelegate.swift */; };
 		A887D00C29D03CBF003715FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887D00B29D03CBF003715FA /* LoginViewController.swift */; };
@@ -34,9 +33,13 @@
 		A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */; };
 		A8A3716329DC272800FF6E75 /* RecentOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */; };
 		A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */; };
+		E4700603B45011F6CF28076D /* Pods_Dot_Order.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4496B836BBD133A4D9BFEF /* Pods_Dot_Order.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D4496B836BBD133A4D9BFEF /* Pods_Dot_Order.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dot_Order.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88DC98AB15529866B73F3F1B /* Pods-Dot_Order.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Order.release.xcconfig"; path = "Target Support Files/Pods-Dot_Order/Pods-Dot_Order.release.xcconfig"; sourceTree = "<group>"; };
+		A227B3026BB7480C1B19C0C8 /* Pods-Dot_Order.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Order.debug.xcconfig"; path = "Target Support Files/Pods-Dot_Order/Pods-Dot_Order.debug.xcconfig"; sourceTree = "<group>"; };
 		A887D00429D03CBF003715FA /* Dot_Order.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dot_Order.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A887D00729D03CBF003715FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A887D00929D03CBF003715FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A80CDC7029F26E51003E7C01 /* Kommunicate in Frameworks */,
+				E4700603B45011F6CF28076D /* Pods_Dot_Order.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,8 @@
 		A1A10F1ABC7F8A1C5949D95C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				A227B3026BB7480C1B19C0C8 /* Pods-Dot_Order.debug.xcconfig */,
+				88DC98AB15529866B73F3F1B /* Pods-Dot_Order.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 				A887D00629D03CBF003715FA /* Dot_Order */,
 				A887D00529D03CBF003715FA /* Products */,
 				A1A10F1ABC7F8A1C5949D95C /* Pods */,
+				ED0D6AA86C8BF7E241C90F87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +191,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		ED0D6AA86C8BF7E241C90F87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D4496B836BBD133A4D9BFEF /* Pods_Dot_Order.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,18 +206,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A887D01829D03CC0003715FA /* Build configuration list for PBXNativeTarget "Dot_Order" */;
 			buildPhases = (
+				37209C7348A403A2A6B3881B /* [CP] Check Pods Manifest.lock */,
 				A887D00029D03CBF003715FA /* Sources */,
 				A887D00129D03CBF003715FA /* Frameworks */,
 				A887D00229D03CBF003715FA /* Resources */,
+				ECDF730C32F6A2F24711A9F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Dot_Order;
-			packageProductDependencies = (
-				A80CDC6F29F26E51003E7C01 /* Kommunicate */,
-			);
 			productName = Dot_Order;
 			productReference = A887D00429D03CBF003715FA /* Dot_Order.app */;
 			productType = "com.apple.product-type.application";
@@ -232,9 +245,6 @@
 				Base,
 			);
 			mainGroup = A887CFFB29D03CBF003715FA;
-			packageReferences = (
-				A80CDC6E29F26E51003E7C01 /* XCRemoteSwiftPackageReference "Kommunicate-iOS-SDK" */,
-			);
 			productRefGroup = A887D00529D03CBF003715FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,6 +278,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37209C7348A403A2A6B3881B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dot_Order-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECDF730C32F6A2F24711A9F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dot_Order/Pods-Dot_Order-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dot_Order/Pods-Dot_Order-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dot_Order/Pods-Dot_Order-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A887D00029D03CBF003715FA /* Sources */ = {
@@ -426,6 +478,7 @@
 		};
 		A887D01929D03CC0003715FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A227B3026BB7480C1B19C0C8 /* Pods-Dot_Order.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,6 +507,7 @@
 		};
 		A887D01A29D03CC0003715FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88DC98AB15529866B73F3F1B /* Pods-Dot_Order.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -502,25 +556,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A80CDC6E29F26E51003E7C01 /* XCRemoteSwiftPackageReference "Kommunicate-iOS-SDK" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Kommunicate-io/Kommunicate-iOS-SDK";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A80CDC6F29F26E51003E7C01 /* Kommunicate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A80CDC6E29F26E51003E7C01 /* XCRemoteSwiftPackageReference "Kommunicate-iOS-SDK" */;
-			productName = Kommunicate;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A887CFFC29D03CBF003715FA /* Project object */;
 }

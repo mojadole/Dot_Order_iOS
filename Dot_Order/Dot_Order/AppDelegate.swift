@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kommunicate
+import ApiAI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,18 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        Kommunicate.setup(applicationId: "2a2673270b8dda73160da2ece9c5926ee")
+        var apiAI: ApiAI?
+        apiAI = ApiAI.shared()
         
-        let kmUser = KMUser()
-        kmUser.userId = "PVngfHPK2X9o9Xepm9eB1PYlgZgeO9Bu"
-        kmUser.displayName = "Happy Eel"
-        
-        // Use this same API for login
-        Kommunicate.registerUser(kmUser, completion: {
-            response, error in
-            guard error == nil else {return}
-            print("login success") // Now, you can launch the chat screen
-        })
+        // Define API.AI configuration here.
+        let configuration = AIDefaultConfiguration()
+        configuration.clientAccessToken = "3fae789965b16afa6a3749b4ed972ff11f7c27a6"
+
+        apiAI?.configuration = configuration
         
         return true
         
