@@ -37,11 +37,11 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
         
     }
     
-    // MARK: speech 받아오는 Function
-    let speechSynthesizer = AVSpeechSynthesizer()
-    
+    // MARK: Speech 받아오는 Function
     func speechAndText(text: String) {
+        let speechSynthesizer = AVSpeechSynthesizer()
         let speechUtterance = AVSpeechUtterance(string: text)
+        
         speechSynthesizer.speak(speechUtterance)
         UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseInOut, animations: {
             self.responseLabel.text = text
@@ -64,6 +64,7 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
         request?.setCompletionBlockSuccess({ (request, response) in
             // Handle success ...
             print("success")
+            self.textToSpeech("안녕")
         }) { (request, error) in
             print(error!)
         }
@@ -109,8 +110,8 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
             fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
         }
         
-        // 사용자가 말할 떄 인식하고 부분적인 결과를 보고하도록 설정
-        recognitionRequest.shouldReportPartialResults = true
+        // 사용자가 말할 때 인식하고 부분적인 결과를 보고하도록 설정
+        recognitionRequest.shouldReportPartialResults = false
         
         /*
          인식을 시작하기 위해 speechRecognizer의 recognitionTask 메서드 호출
@@ -125,7 +126,7 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
             if result != nil {
                 
                 // responseLabel의 text를 result의 최상의 텍스트로 설정, 결과가 최종 결과일 경우 isFinal을 true로 설정
-                self.responseLabel.text = result?.bestTranscription.formattedString
+                //self.responseLabel.text = result?.bestTranscription.formattedString
                 isFinal = (result?.isFinal)!
             }
             
@@ -153,6 +154,17 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
             self.recognitionRequest?.append(buffer)
         }
         
+        responseLabel.text = "사용자 대답"
+    }
+    
+    // MARK: textToSpeech function
+    func textToSpeech(_ text: String) {
+        
+        let synthesizer = AVSpeechSynthesizer()
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+        synthesizer.speak(utterance)
+        
         // audioEngine prepare and start
         audioEngine.prepare()
         
@@ -161,8 +173,6 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
         } catch {
             print("Audio engine couldn't start because of an error.")
         }
-        
-        responseLabel.text = "사용자 대답"
     }
     
     // MARK: Navigation Bar Title 세팅
