@@ -33,6 +33,12 @@
 		A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */; };
 		A8A3716329DC272800FF6E75 /* RecentOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */; };
 		A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */; };
+		A8C7404629FA228E009D8691 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7404529FA228E009D8691 /* Payment.storyboard */; };
+		A8C7404829FA22A1009D8691 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7404729FA22A1009D8691 /* PaymentViewController.swift */; };
+		A8C7404B29FA2C6E009D8691 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7404929FA2C6E009D8691 /* PaymentTableViewCell.swift */; };
+		A8C7404C29FA2C6E009D8691 /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8C7404A29FA2C6E009D8691 /* PaymentTableViewCell.xib */; };
+		A8F58E1D2A0803B200FFDC29 /* Ordering.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F58E1C2A0803B200FFDC29 /* Ordering.storyboard */; };
+		A8F58E1F2A0803CF00FFDC29 /* OrderingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F58E1E2A0803CF00FFDC29 /* OrderingViewController.swift */; };
 		E4700603B45011F6CF28076D /* Pods_Dot_Order.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4496B836BBD133A4D9BFEF /* Pods_Dot_Order.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +74,12 @@
 		A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingListTableViewCell.xib; sourceTree = "<group>"; };
 		A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentOrderTableViewCell.swift; sourceTree = "<group>"; };
 		A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentOrderTableViewCell.xib; sourceTree = "<group>"; };
+		A8C7404529FA228E009D8691 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		A8C7404729FA22A1009D8691 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		A8C7404929FA2C6E009D8691 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		A8C7404A29FA2C6E009D8691 /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
+		A8F58E1C2A0803B200FFDC29 /* Ordering.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ordering.storyboard; sourceTree = "<group>"; };
+		A8F58E1E2A0803CF00FFDC29 /* OrderingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +163,8 @@
 				A8A3714E29DA9F3F00FF6E75 /* ShoppingListViewController.swift */,
 				A8A3715229DAA11900FF6E75 /* RecentOrderListViewController.swift */,
 				A88E652729E53BED00749F03 /* EvaluationViewController.swift */,
+				A8C7404729FA22A1009D8691 /* PaymentViewController.swift */,
+				A8F58E1E2A0803CF00FFDC29 /* OrderingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -163,6 +177,8 @@
 				A8A3714C29DA9F0F00FF6E75 /* ShoppingList.storyboard */,
 				A8A3715029DAA0FA00FF6E75 /* RecentOrderList.storyboard */,
 				A88E652929E53BFC00749F03 /* Evaluation.storyboard */,
+				A8C7404529FA228E009D8691 /* Payment.storyboard */,
+				A8F58E1C2A0803B200FFDC29 /* Ordering.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +203,8 @@
 				A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */,
 				A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */,
 				A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */,
+				A8C7404929FA2C6E009D8691 /* PaymentTableViewCell.swift */,
+				A8C7404A29FA2C6E009D8691 /* PaymentTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -261,11 +279,14 @@
 			files = (
 				A88E652A29E53BFC00749F03 /* Evaluation.storyboard in Resources */,
 				A8A3714629D41B3F00FF6E75 /* SUIT-Heavy.otf in Resources */,
+				A8F58E1D2A0803B200FFDC29 /* Ordering.storyboard in Resources */,
 				A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */,
 				A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */,
+				A8C7404C29FA2C6E009D8691 /* PaymentTableViewCell.xib in Resources */,
 				A8A3714D29DA9F0F00FF6E75 /* ShoppingList.storyboard in Resources */,
 				A887D01429D03CC0003715FA /* LaunchScreen.storyboard in Resources */,
 				A8A3714329D41B3F00FF6E75 /* SUIT-Regular.otf in Resources */,
+				A8C7404629FA228E009D8691 /* Payment.storyboard in Resources */,
 				A887D01129D03CC0003715FA /* Assets.xcassets in Resources */,
 				A887D00F29D03CBF003715FA /* Login.storyboard in Resources */,
 				A8A3714229D41B3F00FF6E75 /* SUIT-SemiBold.otf in Resources */,
@@ -332,7 +353,10 @@
 				A8A3714F29DA9F3F00FF6E75 /* ShoppingListViewController.swift in Sources */,
 				A8A3714B29D6A86C00FF6E75 /* LocationViewController.swift in Sources */,
 				A887D00A29D03CBF003715FA /* SceneDelegate.swift in Sources */,
+				A8C7404B29FA2C6E009D8691 /* PaymentTableViewCell.swift in Sources */,
 				A88E652829E53BED00749F03 /* EvaluationViewController.swift in Sources */,
+				A8F58E1F2A0803CF00FFDC29 /* OrderingViewController.swift in Sources */,
+				A8C7404829FA22A1009D8691 /* PaymentViewController.swift in Sources */,
 				A8A3715329DAA11900FF6E75 /* RecentOrderListViewController.swift in Sources */,
 				A887D02429D2D06B003715FA /* MainViewController.swift in Sources */,
 				A8A3715F29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift in Sources */,

@@ -94,6 +94,14 @@
             </objects>
             <point key="canvasLocation" x="127.48091603053435" y="-28.169014084507044"/>
         </scene>
+        <!--Payment-->
+        <scene sceneID="Ppz-s7-aSo">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PaymentVC" storyboardName="Payment" id="14m-yo-2Nt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="077-Od-LPj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="-28"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="background_color">

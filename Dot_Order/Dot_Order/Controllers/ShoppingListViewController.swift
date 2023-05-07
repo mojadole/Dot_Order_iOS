@@ -62,7 +62,8 @@ class ShoppingListViewController: UIViewController {
     }
     
     @IBAction func payBtnClicked(_ sender: Any) {
-        print("결제 버튼 클릭")
+        guard let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentViewController else { return }
+        navigationController?.pushViewController(paymentVC, animated: true)
     }
     
 }
