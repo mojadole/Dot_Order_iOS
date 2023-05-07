@@ -53,7 +53,8 @@ class PaymentViewController: UIViewController {
     }
     
     @IBAction func paymentButtonClicked(sender: Any) {
-        
+        guard let orderingVC = self.storyboard?.instantiateViewController(withIdentifier: "OrderingVC") as? OrderingViewController else { return }
+        self.navigationController?.pushViewController(orderingVC, animated: true)
     }
     
 }

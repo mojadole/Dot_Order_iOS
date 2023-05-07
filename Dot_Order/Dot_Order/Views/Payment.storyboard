@@ -145,6 +145,9 @@
                                                 <state key="normal" title="14,500원 결제하기">
                                                     <color key="titleColor" name="background_color"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="paymentButtonClickedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GFt-G3-D61"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,6 +214,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64.885496183206101" y="-35.211267605633807"/>
+        </scene>
+        <!--Ordering-->
+        <scene sceneID="UKD-ci-0ta">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="OrderingVC" storyboardName="Ordering" id="Sjn-0L-uS5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guT-EK-izw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="-35"/>
         </scene>
     </scenes>
     <resources>
