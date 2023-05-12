@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
     
@@ -23,6 +24,7 @@ class LoginViewController: UIViewController {
         idView.layer.cornerRadius = 15
         idView.layer.borderWidth = 3
         idView.layer.borderColor = UIColor(named: "main_color")?.cgColor
+        
         passwordView.layer.cornerRadius = 15
         passwordView.layer.borderWidth = 3
         passwordView.layer.borderColor = UIColor(named: "main_color")?.cgColor

@@ -15,11 +15,16 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     @IBOutlet weak var shoppingListButton: UIButton!
     @IBOutlet weak var responseLabel: UILabel!
+    @IBOutlet weak var speakingButton: UIButton!
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ko-KR"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
+    private let synthesizer = AVSpeechSynthesizer()
+    
+    var menu: String?
+    var count: Int?
     
     override func viewDidLoad() {
         
@@ -35,17 +40,8 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
         shoppingListButton.accessibilityTraits = .button
         shoppingListButton.addTarget(self, action: #selector(shoppingList(_:)), for: .touchUpInside)
         
-    }
-    
-    // MARK: Speech 받아오는 Function
-    func speechAndText(text: String) {
-        let speechSynthesizer = AVSpeechSynthesizer()
-        let speechUtterance = AVSpeechUtterance(string: text)
+        textToSpeech("말하기")
         
-        speechSynthesizer.speak(speechUtterance)
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseInOut, animations: {
-            self.responseLabel.text = text
-        }, completion: nil)
     }
     
     // MARK: Speaking Button Click Function
@@ -54,26 +50,18 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
         if audioEngine.isRunning {
             audioEngine.stop()
             recognitionRequest?.endAudio()
+            speakingButton.isEnabled = false
         } else {
             startRecording()
         }
         
-        // Request using text (assumes that speech recognition / ASR is done using a third-party library, e.g. AT&T)
-        let request = ApiAI.shared().textRequest()
-        request?.query = ["hello"]
-        request?.setCompletionBlockSuccess({ (request, response) in
-            // Handle success ...
-            print("success")
-            self.textToSpeech("안녕")
-        }) { (request, error) in
-            print(error!)
-        }
-
-        ApiAI.shared().enqueue(request)
     }
     
     // MARK: startRecording Function
     func startRecording() {
+        
+        print("음성인식 시작")
+        print("=====================")
         
         // 인식 작업이 처리 중인지 확인
         if recognitionTask != nil {
@@ -101,9 +89,6 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
         
         // 장치에 녹음할 오디오 입력이 있는지 확인
         let inputNode = audioEngine.inputNode
-//        guard let inputNode = audioEngine.inputNode else {
-//            fatalError("Audio engine has no input node")
-//        }
         
         // recognitionRequest가 객체화 되고 nil이 아닌지 확인
         guard let recognitionRequest = recognitionRequest else {
@@ -126,7 +111,7 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
             if result != nil {
                 
                 // responseLabel의 text를 result의 최상의 텍스트로 설정, 결과가 최종 결과일 경우 isFinal을 true로 설정
-                //self.responseLabel.text = result?.bestTranscription.formattedString
+                self.responseLabel.text = result?.bestTranscription.formattedString
                 isFinal = (result?.isFinal)!
             }
             
@@ -135,12 +120,12 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                 
                 // audioEngine(오디오 입력) 중지
                 self.audioEngine.stop()
-                
                 inputNode.removeTap(onBus: 0)
                 
                 // 인식 요청 및 인식 작업 중지
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
+                self.speakingButton.isEnabled = true
             }
         })
         
@@ -154,25 +139,33 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
             self.recognitionRequest?.append(buffer)
         }
         
-        responseLabel.text = "사용자 대답"
-    }
-    
-    // MARK: textToSpeech function
-    func textToSpeech(_ text: String) {
-        
-        let synthesizer = AVSpeechSynthesizer()
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
-        synthesizer.speak(utterance)
-        
-        // audioEngine prepare and start
         audioEngine.prepare()
         
         do {
             try audioEngine.start()
         } catch {
-            print("Audio engine couldn't start because of an error.")
+            print("audioEngine couldn't start because of an error.")
         }
+        
+        responseLabel.text = ""
+    }
+    
+    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
+        if available {
+            speakingButton.isEnabled = true
+        } else {
+            speakingButton.isEnabled = false
+        }
+    }
+    
+    // MARK: textToSpeech function
+    func textToSpeech(_ text: String) {
+        
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+        
+        self.synthesizer.speak(utterance)
+        
     }
     
     // MARK: Navigation Bar Title 세팅

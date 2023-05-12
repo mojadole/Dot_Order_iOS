@@ -183,6 +183,7 @@
                     <connections>
                         <outlet property="responseLabel" destination="J4T-cv-moo" id="5EE-gM-Wsk"/>
                         <outlet property="shoppingListButton" destination="zfG-Ms-PTD" id="P8L-82-wRZ"/>
+                        <outlet property="speakingButton" destination="UIa-Up-prl" id="f14-Hz-XLX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bb-JO-WGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

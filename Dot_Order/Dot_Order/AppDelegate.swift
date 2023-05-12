@@ -12,6 +12,10 @@ import ApiAI
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    public let baseUrl = "http://13.209.200.143:8080"
+    public let userIdx = 1
+    public let userGps = "(37.234234, 123.2342)"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         

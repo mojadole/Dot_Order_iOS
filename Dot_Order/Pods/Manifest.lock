@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.6.4)
   - ApiAI (0.7.2):
     - ApiAI/AudioFileConverter (= 0.7.2)
     - ApiAI/Core (= 0.7.2)
@@ -26,15 +27,18 @@ PODS:
     - ApiAI/Core
 
 DEPENDENCIES:
+  - Alamofire
   - ApiAI
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - ApiAI
 
 SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   ApiAI: d4b49d3736f33ce6f3ef66dc33c0e0fccb23579e
 
-PODFILE CHECKSUM: 92f4854246189a5f48cf82cdb37751f19acf261e
+PODFILE CHECKSUM: e04f0d2914b57041f0f1e6b5574c27e85966391c
 
 COCOAPODS: 1.11.3

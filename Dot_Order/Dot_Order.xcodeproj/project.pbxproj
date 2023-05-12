@@ -37,8 +37,11 @@
 		A8C7404829FA22A1009D8691 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7404729FA22A1009D8691 /* PaymentViewController.swift */; };
 		A8C7404B29FA2C6E009D8691 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7404929FA2C6E009D8691 /* PaymentTableViewCell.swift */; };
 		A8C7404C29FA2C6E009D8691 /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8C7404A29FA2C6E009D8691 /* PaymentTableViewCell.xib */; };
+		A8DD72FE2A0E2E87008373F5 /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD72FD2A0E2E87008373F5 /* CartService.swift */; };
+		A8DD73002A0E2EBD008373F5 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD72FF2A0E2EBD008373F5 /* CartModel.swift */; };
 		A8F58E1D2A0803B200FFDC29 /* Ordering.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F58E1C2A0803B200FFDC29 /* Ordering.storyboard */; };
 		A8F58E1F2A0803CF00FFDC29 /* OrderingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F58E1E2A0803CF00FFDC29 /* OrderingViewController.swift */; };
+		A8F58E212A0CB4C400FFDC29 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F58E202A0CB4C400FFDC29 /* LoginModel.swift */; };
 		E4700603B45011F6CF28076D /* Pods_Dot_Order.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4496B836BBD133A4D9BFEF /* Pods_Dot_Order.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,8 +81,11 @@
 		A8C7404729FA22A1009D8691 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		A8C7404929FA2C6E009D8691 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		A8C7404A29FA2C6E009D8691 /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
+		A8DD72FD2A0E2E87008373F5 /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
+		A8DD72FF2A0E2EBD008373F5 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		A8F58E1C2A0803B200FFDC29 /* Ordering.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ordering.storyboard; sourceTree = "<group>"; };
 		A8F58E1E2A0803CF00FFDC29 /* OrderingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingViewController.swift; sourceTree = "<group>"; };
+		A8F58E202A0CB4C400FFDC29 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 		A887D00629D03CBF003715FA /* Dot_Order */ = {
 			isa = PBXGroup;
 			children = (
+				A8DD72FA2A0DF9F5008373F5 /* Services */,
 				A887D01E29D2C690003715FA /* Views */,
 				A887D01D29D2C5E2003715FA /* Controllers */,
 				A887D01C29D2C5C8003715FA /* ViewModels */,
@@ -142,6 +149,8 @@
 		A887D01B29D2C341003715FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8F58E202A0CB4C400FFDC29 /* LoginModel.swift */,
+				A8DD72FF2A0E2EBD008373F5 /* CartModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +216,14 @@
 				A8C7404A29FA2C6E009D8691 /* PaymentTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A8DD72FA2A0DF9F5008373F5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A8DD72FD2A0E2E87008373F5 /* CartService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		ED0D6AA86C8BF7E241C90F87 /* Frameworks */ = {
@@ -356,7 +373,10 @@
 				A8C7404B29FA2C6E009D8691 /* PaymentTableViewCell.swift in Sources */,
 				A88E652829E53BED00749F03 /* EvaluationViewController.swift in Sources */,
 				A8F58E1F2A0803CF00FFDC29 /* OrderingViewController.swift in Sources */,
+				A8DD73002A0E2EBD008373F5 /* CartModel.swift in Sources */,
+				A8DD72FE2A0E2E87008373F5 /* CartService.swift in Sources */,
 				A8C7404829FA22A1009D8691 /* PaymentViewController.swift in Sources */,
+				A8F58E212A0CB4C400FFDC29 /* LoginModel.swift in Sources */,
 				A8A3715329DAA11900FF6E75 /* RecentOrderListViewController.swift in Sources */,
 				A887D02429D2D06B003715FA /* MainViewController.swift in Sources */,
 				A8A3715F29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift in Sources */,
