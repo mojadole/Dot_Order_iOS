@@ -37,17 +37,25 @@ class ShoppingListTableViewCell: UITableViewCell {
     }
     
     @objc func plusButtonPressed(_ sender: UIButton) {
-        print("plus button is pressed")
+        
         count += 1
-        countLabel.text = String(count)
+        
+        APIService.shared.cartPatch(menuNameLabel.text!, count) { [self](response) in
+            print("plus button is pressed")
+            countLabel.text = String(count)
+        }
     }
     
     @objc func minusButtonPressed(_ sender: UIButton) {
-        print("minus button is pressed")
+        
         if count > 0 {
             count -= 1
         }
-        countLabel.text = String(count)
+        
+        APIService.shared.cartPatch(menuNameLabel.text!, count) { [self](response) in
+            print("minus button is pressed")
+            countLabel.text = String(count)
+        }
     }
     
 }

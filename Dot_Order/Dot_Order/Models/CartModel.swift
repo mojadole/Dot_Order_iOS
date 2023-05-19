@@ -16,8 +16,9 @@ struct CartModel: Codable {
 struct cartData: Codable {
     let createdDate: String
     let modifiedDate: String
-    let user: userInfo?
-    let menu: menuInfo?
+    let idx: Int
+    let user: userInfo
+    let menu: menuInfo
     let count: Int
     let price: Int
 }
@@ -31,15 +32,25 @@ struct userInfo: Codable {
 
 struct menuInfo: Codable {
     let idx: Int
-    let store: storeInfo?
+    let store: storeInfo
     let name: String
     let price: Int
-    let category: String
-    let content: String
 }
 
 struct storeInfo: Codable {
     let idx: Int
     let name: String
     let gps: String
+}
+
+struct CartListModel: Codable {
+    let success: Bool
+    let message: String
+    let cartList: [cartList]
+}
+
+struct cartList: Codable {
+    let menu_name: String
+    let count: Int
+    let price: Int
 }

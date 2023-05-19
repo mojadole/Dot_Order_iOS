@@ -14,6 +14,8 @@ class ShoppingListViewController: UIViewController {
     @IBOutlet weak var modifyButton: UIButton!
     @IBOutlet weak var payButton: UIButton!
     
+    var shoppingList: [cartList]?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -30,9 +32,12 @@ class ShoppingListViewController: UIViewController {
     
         registerXib()
         
-        shoppingListTableView.dataSource = self
-        shoppingListTableView.delegate = self
-    
+        APIService.shared.cartGet { [self](response) in
+            shoppingList = response
+            shoppingListTableView.dataSource = self
+            shoppingListTableView.delegate = self
+        }
+        
     }
     
     // MARK: Navigation Bar Title 세팅
@@ -71,7 +76,7 @@ class ShoppingListViewController: UIViewController {
 // MARK: TableView 세팅
 extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return shoppingList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -81,8 +86,10 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingListCell", for: indexPath) as! ShoppingListTableViewCell
         
-        cell.countLabel.text = "1"
-        cell.menuNameLabel.text = "메뉴 \(indexPath.row)"
+        let menuInfo = shoppingList![indexPath.row]
+        
+        cell.countLabel.text = String(menuInfo.count)
+        cell.menuNameLabel.text = menuInfo.menu_name
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
         

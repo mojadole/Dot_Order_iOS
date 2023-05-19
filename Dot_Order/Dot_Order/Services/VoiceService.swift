@@ -1,36 +1,30 @@
 //
-//  LocationViewController.swift
+//  VoiceService.swift
 //  Dot_Order
 //
-//  Created by 김영현 on 2023/03/31.
+//  Created by 김영현 on 2023/05/19.
 //
 
 import Foundation
-import UIKit
 import AVFoundation
 import Speech
+import UIKit
 
-class LocationViewController: UIViewController, SFSpeechRecognizerDelegate {
+class VoiceService {
     
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ko-KR"))
-    private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
-    private var recognitionTask: SFSpeechRecognitionTask?
-    private let audioEngine = AVAudioEngine()
-    private let synthesizer = AVSpeechSynthesizer()
+    static let shared = VoiceService()
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        
-        speechRecognizer?.delegate = self
-        
-        self.navigationItem.titleView = attributeTitleView()
-        
-    }
+    let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ko-KR"))
+    var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
+    var recognitionTask: SFSpeechRecognitionTask?
+    let audioEngine = AVAudioEngine()
+    let synthesizer = AVSpeechSynthesizer()
+    
+    var text: String = ""
     
     // MARK: startRecording Function
-    func startRecording() {
-
+    func startRecording(_ button: UIButton) -> String {
+        
         // 인식 작업이 처리 중인지 확인
         if recognitionTask != nil {
             recognitionTask?.cancel()
@@ -79,8 +73,10 @@ class LocationViewController: UIViewController, SFSpeechRecognizerDelegate {
             if result != nil {
 
                 // responseLabel의 text를 result의 최상의 텍스트로 설정, 결과가 최종 결과일 경우 isFinal을 true로 설정
-                //self.responseLabel.text = result?.bestTranscription.formattedString
+                self.text = (result?.bestTranscription.formattedString)!
+                print(self.text)
                 isFinal = (result?.isFinal)!
+                
             }
 
             // 오류가 없거나 최종 결과가 나오면
@@ -93,10 +89,13 @@ class LocationViewController: UIViewController, SFSpeechRecognizerDelegate {
                 // 인식 요청 및 인식 작업 중지
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
-                //self.speakingButton.isEnabled = true
+                button.isEnabled = true
             }
+            
         })
-
+        
+        print("Handler escape: ", self.text)
+        
         /*
          recognitionRequest에 오디오 입력 추가
          인식 작업을 시작한 후 오디오 입력을 추가해도 됨
@@ -114,23 +113,26 @@ class LocationViewController: UIViewController, SFSpeechRecognizerDelegate {
         } catch {
             print("audioEngine couldn't start because of an error.")
         }
-
-        //responseLabel.text = ""
+        
+        return self.text
     }
     
-    // MARK: NavigationBar Title 세팅
-    private func attributeTitleView() -> UIView {
+    func speechRecognizer(_ button: UIButton, _ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
+        if available {
+            button.isEnabled = true
+        } else {
+            button.isEnabled = false
+        }
+    }
+    
+    // MARK: textToSpeech Function
+    func textToSpeech(_ text: String) {
         
-        let titleLabel: UILabel = UILabel()
-        let naviTitle: NSMutableAttributedString = NSMutableAttributedString(
-            string: "가게 위치 탐색",
-            attributes: [
-            .foregroundColor: UIColor(named: "main_color")!,
-            .font: UIFont(name: "SUIT-ExtraBold", size: 40)!
-        ])
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+        utterance.rate = 0.6
         
-        titleLabel.attributedText = naviTitle
+        self.synthesizer.speak(utterance)
         
-        return titleLabel
     }
 }
