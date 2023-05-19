@@ -17,7 +17,7 @@ class APIService {
     let header: HTTPHeaders = ["Content-Type" : "application/json"]
     
     // MARK: 장바구니 POST
-    func cartPost(_ menu: String, _ count: Int) {
+    func cartPost(_ menu: String, _ count: Int, completion: @escaping () -> Void) {
         
         let url = appDelegate.baseUrl + "/cart/save"
         let params: [String: Any] = [
@@ -39,7 +39,7 @@ class APIService {
             switch response.result {
             case .success(let result):
                 print("장바구니 정보 post 성공")
-                print(response)
+                completion()
             case .failure(let error):
                 print("error: \(error.localizedDescription)")
                 
@@ -98,10 +98,23 @@ class APIService {
     }
     
     // MARK: 주문 POST
-    func orderPost() {
+    func orderPost(completion: @escaping () -> Void) {
         let url = appDelegate.baseUrl + "/order/" + String(appDelegate.userIdx) + "/place"
         
-        
+        AF.request(url,
+                   method: .post,
+                   encoding: JSONEncoding.default,
+                   headers: header
+        ).responseJSON { response in
+            switch response.result {
+            case .success(_):
+                print("Order 정보 post 성공")
+                completion()
+            case .failure(let error):
+                print("error: \(error.localizedDescription)")
+                
+            }
+        }
     }
     
     // MARK: 주문 GET

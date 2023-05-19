@@ -36,6 +36,13 @@ class ShoppingListViewController: UIViewController {
             shoppingList = response
             shoppingListTableView.dataSource = self
             shoppingListTableView.delegate = self
+            
+            VoiceService.shared.textToSpeech(
+                "현재 장바구니에 담긴 메뉴는" +
+//                shoppingList![0].menu_name +
+//                String(shoppingList![0].count) +
+                "입니다. 수정을 원하시면 수정 버튼을, 결제를 원하시면 결제 버튼을 클릭해주세요"
+            )
         }
         
     }

@@ -92,19 +92,58 @@
                                     <constraint firstAttribute="width" secondItem="zt2-Jm-jwG" secondAttribute="height" multiplier="1:1" id="czr-bx-BYO"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WPs-ns-8P8">
+                                <rect key="frame" x="30" y="698.66666666666663" width="333" height="99.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjX-n1-MsY">
+                                        <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="99.333333333333329"/>
+                                        <color key="backgroundColor" name="main_color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MjX-n1-MsY" secondAttribute="height" multiplier="160:105" id="oWo-RG-jFt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="재검색">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVj-et-Ezv">
+                                        <rect key="frame" x="181.66666666666663" y="0.0" width="151.33333333333337" height="99.333333333333329"/>
+                                        <color key="backgroundColor" name="main_color"/>
+                                        <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="주문">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderButtonClicked:" destination="Xjd-bm-j3C" eventType="touchUpInside" id="D0u-ra-IKS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QVj-et-Ezv" firstAttribute="width" secondItem="QVj-et-Ezv" secondAttribute="height" multiplier="160:105" id="INY-5S-xot"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ezf-5X-r4E"/>
                         <color key="backgroundColor" name="background_color"/>
                         <constraints>
                             <constraint firstItem="zt2-Jm-jwG" firstAttribute="centerX" secondItem="RHz-h8-oeF" secondAttribute="centerX" id="SYZ-Qm-xAe"/>
+                            <constraint firstItem="WPs-ns-8P8" firstAttribute="centerX" secondItem="RHz-h8-oeF" secondAttribute="centerX" id="TM9-k5-7B6"/>
                             <constraint firstItem="zt2-Jm-jwG" firstAttribute="centerY" secondItem="RHz-h8-oeF" secondAttribute="centerY" id="WGU-NB-fBE"/>
+                            <constraint firstItem="Ezf-5X-r4E" firstAttribute="bottom" secondItem="WPs-ns-8P8" secondAttribute="bottom" constant="20" id="WaX-LZ-8oG"/>
+                            <constraint firstItem="WPs-ns-8P8" firstAttribute="leading" secondItem="Ezf-5X-r4E" secondAttribute="leading" constant="30" id="tXv-nI-U3v"/>
                             <constraint firstItem="zt2-Jm-jwG" firstAttribute="leading" secondItem="Ezf-5X-r4E" secondAttribute="leading" constant="100" id="xQr-dK-Rhh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="orderButton" destination="QVj-et-Ezv" id="ncF-K8-Ta6"/>
+                        <outlet property="researchButton" destination="MjX-n1-MsY" id="rNE-gt-aIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWf-C8-gaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909" y="-349"/>
+            <point key="canvasLocation" x="1907.6335877862596" y="-349.29577464788736"/>
         </scene>
         <!--ShoppingList-->
         <scene sceneID="WNA-93-SDv">

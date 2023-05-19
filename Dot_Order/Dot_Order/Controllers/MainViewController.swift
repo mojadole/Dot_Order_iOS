@@ -50,10 +50,8 @@ class MainViewController: UIViewController {
     
     //가게 위치 탐색 페이지로 이동
     @objc func findLocation(_ sender: UIButton) {
-//        guard let locationVC = self.storyboard?.instantiateViewController(withIdentifier: "LocationVC") else { return }
-//        self.navigationController?.pushViewController(locationVC, animated: true)
-        guard let orderVC = self.storyboard?.instantiateViewController(withIdentifier: "OrderVC") else { return }
-        self.navigationController?.pushViewController(orderVC, animated: true)
+        guard let locationVC = self.storyboard?.instantiateViewController(withIdentifier: "LocationVC") else { return }
+        self.navigationController?.pushViewController(locationVC, animated: true)
     }
     
     //최근 주문 메뉴 리스트 페이지로 이동
