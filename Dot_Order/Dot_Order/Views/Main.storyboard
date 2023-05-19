@@ -78,6 +78,14 @@
             </objects>
             <point key="canvasLocation" x="935" y="4"/>
         </scene>
+        <!--Ordering-->
+        <scene sceneID="ADo-ra-CGb">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="OrderingVC" storyboardName="Ordering" id="Hr0-u7-ZtO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJM-9u-gEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933" y="-480"/>
+        </scene>
         <!--Location View Controller-->
         <scene sceneID="g3A-bI-vCk">
             <objects>

@@ -16,6 +16,8 @@ class PaymentViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var paymentButton: UIButton!
     
+    var shoppingList: [cartList]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +31,11 @@ class PaymentViewController: UIViewController {
         
         registerXib()
         
-        paymentTableView.delegate = self
-        paymentTableView.dataSource = self
+        APIService.shared.cartGet() { [self](response) in
+            shoppingList = response
+            paymentTableView.delegate = self
+            paymentTableView.dataSource = self
+        }
     }
     
     private func attributeTitleView() -> UIView {
@@ -53,8 +58,11 @@ class PaymentViewController: UIViewController {
     }
     
     @IBAction func paymentButtonClicked(sender: Any) {
-        guard let orderingVC = self.storyboard?.instantiateViewController(withIdentifier: "OrderingVC") as? OrderingViewController else { return }
-        self.navigationController?.pushViewController(orderingVC, animated: true)
+        APIService.shared.orderPost {
+            guard let orderingVC = self.storyboard?.instantiateViewController(withIdentifier: "OrderingVC") as? OrderingViewController else { return }
+            orderingVC.modalPresentationStyle = .fullScreen
+            self.present(orderingVC, animated: true)
+        }
     }
     
 }
@@ -62,7 +70,7 @@ class PaymentViewController: UIViewController {
 extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return shoppingList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -73,11 +81,13 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "paymentCell", for: indexPath) as! PaymentTableViewCell
         
+        let menuInfo = shoppingList![indexPath.row]
+        
         cell.selectionStyle = .none
         
-        cell.menuNameLabel.text = "참치김밥"
-        cell.countLabel.text = "2개"
-        cell.priceLabel.text = "3500원"
+        cell.menuNameLabel.text = menuInfo.menu_name
+        cell.countLabel.text = String(menuInfo.count) + "개"
+        cell.priceLabel.text = String(menuInfo.price) + "원"
         
         return cell
         

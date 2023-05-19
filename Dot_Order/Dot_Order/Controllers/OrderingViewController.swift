@@ -16,6 +16,8 @@ class OrderingViewController: UIViewController {
     @IBOutlet weak var secondCircleView: UIView!
     @IBOutlet weak var thirdCircleView: UIView!
     
+    var orderList: orderData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +31,11 @@ class OrderingViewController: UIViewController {
         
         registerXib()
         
-        orderListTableView.delegate = self
-        orderListTableView.dataSource = self
+        APIService.shared.orderGet() { [self](response) in
+            orderList = response
+            orderListTableView.delegate = self
+            orderListTableView.dataSource = self
+        }
         
     }
     
@@ -53,6 +58,11 @@ class OrderingViewController: UIViewController {
         self.orderListTableView.register(nibName, forCellReuseIdentifier: "paymentCell")
     }
     
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return }
+        mainVC.modalPresentationStyle = .fullScreen
+        self.present(mainVC, animated: true)
+    }
 }
 
 extension OrderingViewController: UITableViewDelegate, UITableViewDataSource {
