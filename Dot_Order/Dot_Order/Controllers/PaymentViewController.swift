@@ -42,7 +42,7 @@ class PaymentViewController: UIViewController {
                 totalPrice += list.price
             }
             totalPriceLabel.text = "\(totalPrice)원"
-            paymentButton.titleLabel?.text = "\(totalPrice)원"
+            paymentButton.setTitle("\(totalPrice)원 결제하기", for: .normal)
         }
     }
     

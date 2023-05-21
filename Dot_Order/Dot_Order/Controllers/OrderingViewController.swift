@@ -36,11 +36,11 @@ class OrderingViewController: UIViewController {
         
         registerXib()
         
-        APIService.shared.orderGet() { [self](response) in
-            orderList = response
-            orderListTableView.delegate = self
-            orderListTableView.dataSource = self
-        }
+//        APIService.shared.orderGet() { [self](response) in
+//            orderList = response
+//            orderListTableView.delegate = self
+//            orderListTableView.dataSource = self
+//        }
         
     }
     
@@ -49,6 +49,11 @@ class OrderingViewController: UIViewController {
         super.viewDidAppear(true)
         
         APIService.shared.orderGet() { [self](response) in
+            
+            orderList = response
+            orderListTableView.delegate = self
+            orderListTableView.dataSource = self
+            
             if response.status == "WAIT" {
                 VoiceService.shared.textToSpeech("가게에서 주문을 확인 중 입니다.")
                 firstCircleView.backgroundColor = UIColor(red: 255, green: 122, blue: 0, alpha: 1)
