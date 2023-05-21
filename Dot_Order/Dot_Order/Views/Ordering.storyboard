@@ -121,7 +121,7 @@
                                     <constraint firstAttribute="width" secondItem="gvu-XY-ZAI" secondAttribute="height" multiplier="1:1" id="rbZ-6P-Oam"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="close_yellow_icon"/>
+                                <state key="normal" image="home_icon"/>
                                 <connections>
                                     <action selector="cancelButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UhF-Cm-esn"/>
                                 </connections>
@@ -143,6 +143,7 @@
                     <connections>
                         <outlet property="cookingView" destination="XZx-jk-EWc" id="00R-Jx-1HU"/>
                         <outlet property="firstCircleView" destination="H8Y-WW-5jg" id="tbI-Xl-DWW"/>
+                        <outlet property="homeButton" destination="gvu-XY-ZAI" id="9jT-iJ-vUZ"/>
                         <outlet property="orderListTableView" destination="jGb-YV-xs1" id="Y5P-Sj-XPj"/>
                         <outlet property="secondCircleView" destination="LOO-rq-bw8" id="Z27-VY-nEm"/>
                         <outlet property="thirdCircleView" destination="3s9-TP-Mfb" id="cB3-7e-cK1"/>
@@ -162,7 +163,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="close_yellow_icon" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="home_icon" width="170.66667175292969" height="170.66667175292969"/>
         <namedColor name="background_color">
             <color red="0.15700000524520874" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

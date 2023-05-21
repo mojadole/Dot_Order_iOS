@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var recentMenuButton: UIButton!
+    @IBOutlet weak var orderingButton: UIButton!
     
     override func viewDidLoad() {
         
@@ -32,6 +33,11 @@ class MainViewController: UIViewController {
         recentMenuButton.accessibilityHint = "최근 주문한 내역들을 확인하는 페이지로 이동합니다"
         recentMenuButton.accessibilityTraits = .button
         recentMenuButton.addTarget(self, action: #selector(recentOrder(_:)), for: .touchUpInside)
+        
+        orderingButton.accessibilityLabel = "현재 주문 상황 확인"
+        orderingButton.accessibilityHint = "현재 주문 상황을 확인할 수 있는 페이지로 이동합니다"
+        orderingButton.accessibilityTraits = .button
+        orderingButton.addTarget(self, action: #selector(ordering(_:)), for: .touchUpInside)
         
     }
     
@@ -58,6 +64,13 @@ class MainViewController: UIViewController {
     @objc func recentOrder(_ sender: UIButton) {
         guard let recentOrderVC = self.storyboard?.instantiateViewController(withIdentifier: "RecentOrderVC") else { return }
         self.navigationController?.pushViewController(recentOrderVC, animated: true)
+    }
+    
+    //현재 주문 상황 페이지로 이동
+    @objc func ordering(_ sender: UIButton) {
+        guard let orderingVC = self.storyboard?.instantiateViewController(withIdentifier: "OrderingVC") else { return }
+        orderingVC.modalPresentationStyle = .fullScreen
+        self.present(orderingVC, animated: true)
     }
     
 }
