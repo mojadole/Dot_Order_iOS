@@ -62,7 +62,7 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                 if userResponse == "돈까스" {
                     VoiceService.shared.textToSpeech("해당 메뉴가 존재하지 않아 추천 메뉴 세 가지를 말씀해드리겠습니다. 잠시만 기다려 주세요.")
                     APIService.shared.recommendGet("돈까스") { response in
-                        VoiceService.shared.textToSpeech("추천 메뉴는 " + response[0] + " " + response[1] + " " + response[2] + " 입니다.")
+                        VoiceService.shared.textToSpeech("추천 메뉴는 \(response) \(response[0].value)원, 입니다.")
                     }
                 }
                 

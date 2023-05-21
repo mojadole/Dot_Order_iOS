@@ -137,7 +137,7 @@ class APIService {
     }
     
     // MARK: 추천 메뉴 GET
-    func recommendGet(_ menu: String, completion: @escaping ([String]) -> Void) {
+    func recommendGet(_ menu: String, completion: @escaping ([String: Int]) -> Void) {
         
         let urlStr = appDelegate.recommendUrl + menu
         guard let encodingUrl = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
@@ -147,7 +147,7 @@ class APIService {
                    method: .get,
                    encoding: JSONEncoding.default,
                    headers: header
-        ).responseDecodable(of: [String].self) { response in
+        ).responseDecodable(of: [String: Int].self) { response in
             switch response.result {
             case .success(let result):
                 print(result)

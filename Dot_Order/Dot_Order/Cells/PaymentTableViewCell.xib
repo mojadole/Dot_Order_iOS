@@ -23,9 +23,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="340" height="106"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메뉴명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdm-nJ-Uft">
-                        <rect key="frame" x="25" y="28" width="105" height="50"/>
-                        <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수제 왕돈까스" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdm-nJ-Uft">
+                        <rect key="frame" x="25" y="8" width="130" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="vkl-Qu-ga0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="36"/>
                         <color key="textColor" name="background_color"/>
                         <nil key="highlightedColor"/>
                     </label>
