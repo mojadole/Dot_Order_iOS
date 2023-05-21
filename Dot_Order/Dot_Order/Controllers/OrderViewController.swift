@@ -48,6 +48,8 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
     // MARK: speaking Button Click Function
     @IBAction func speakingButtonClicked(_ sender: Any) {
         
+        VoiceService.shared.stopSpeak()
+        
         if audioEngine.isRunning {
             audioEngine.stop()
             recognitionRequest?.endAudio()
@@ -59,22 +61,38 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                 let userResponse = response
                 let responseList = response.components(separatedBy: " ")
                 
-                if userResponse == "돈까스" {
-                    VoiceService.shared.textToSpeech("해당 메뉴가 존재하지 않아 추천 메뉴 세 가지를 말씀해드리겠습니다. 잠시만 기다려 주세요.")
-                    APIService.shared.recommendGet("돈까스") { response in
-                        VoiceService.shared.textToSpeech("추천 메뉴는 \(response) \(response[0].value)원, 입니다.")
-                    }
-                }
-                
-                if responseList.contains("주문할게") || responseList.contains("주문할께") {
-                    APIService.shared.cartPost("수제왕돈까스", 1) {
-                        VoiceService.shared.textToSpeech("수제왕돈까스 1개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?")
+                if responseList.contains("돈까스") {
+                    if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") {
+                        APIService.shared.cartPost("수제왕돈까스", 1) {
+                            VoiceService.shared.textToSpeech("수제 왕돈까스 1개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?")
+                        }
+                    } else {
+                        VoiceService.shared.textToSpeech("해당 메뉴가 존재하지 않아 추천 메뉴 세 가지를 말씀해드리겠습니다. 잠시만 기다려 주세요.")
+                        APIService.shared.recommendGet("돈까스") { response in
+                            VoiceService.shared.textToSpeech("추천 메뉴는 \(response[0][0]) \(response[0][1])원, \(response[1][0]) \(response[1][1])원, \(response[2][0]) \(response[2][1])원 입니다.")
+                        }
                     }
                 }
                 
                 if userResponse == "어" || userResponse == "엉" || userResponse == "응" {
                     guard let shoppingListVC = self.storyboard?.instantiateViewController(withIdentifier: "ShoppingListVC") as? ShoppingListViewController else { return }
                     self.navigationController?.pushViewController(shoppingListVC, animated: true)
+                }
+                
+                if responseList.contains("육개장") || responseList.contains("육계장") {
+                    if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") {
+                        print("post 시작")
+                        APIService.shared.cartPost("육개장", 1) {
+                            VoiceService.shared.textToSpeech("육개장 한 개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?")
+                        }
+                    } else {
+                        VoiceService.shared.textToSpeech("해당 메뉴가 가게에 존재합니다.")
+                    }
+                }
+                
+                if userResponse == "결제할게" || userResponse == "결제할께" {
+                    guard let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentViewController else { return }
+                    self.navigationController?.pushViewController(paymentVC, animated: true)
                 }
             }
         }
@@ -199,6 +217,8 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     // MARK: 장바구니 페이지로 이동
     @objc func shoppingList(_ sender: UIButton) {
+        VoiceService.shared.stopSpeak()
+        
         guard let shoppingListVC = self.storyboard?.instantiateViewController(withIdentifier: "ShoppingListVC") as? ShoppingListViewController else { return }
         self.navigationController?.pushViewController(shoppingListVC, animated: true)
     }

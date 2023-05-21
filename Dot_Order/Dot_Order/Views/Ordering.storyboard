@@ -156,7 +156,7 @@
         <!--Main-->
         <scene sceneID="hCv-RK-yDf">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MainVC" storyboardName="Main" id="Xw7-1M-EBY" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MainNC" storyboardName="Main" id="Xw7-1M-EBY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYh-1Z-nNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="642" y="-27"/>

@@ -26,4 +26,10 @@ class VoiceService {
         self.synthesizer.speak(utterance)
         
     }
+    
+    func stopSpeak() {
+        
+        self.synthesizer.stopSpeaking(at: .immediate)
+        
+    }
 }

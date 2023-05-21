@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
         logoImageView.isAccessibilityElement = false
         orderButton.layer.cornerRadius = 20
         recentMenuButton.layer.cornerRadius = 20
+        orderingButton.layer.cornerRadius = 20
         
         orderButton.accessibilityLabel = "주문하기"
         orderButton.accessibilityHint = "메뉴를 주문하기 위한 페이지로 이동합니다"

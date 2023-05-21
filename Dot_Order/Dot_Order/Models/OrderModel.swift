@@ -25,3 +25,18 @@ struct orderDetails: Codable {
     let menuName: String
     let count: Int
 }
+
+struct OrderPostModel: Codable {
+    let success: Bool
+    let message: String
+    let orderPostData: orderPostData?
+}
+
+struct orderPostData: Codable {
+    let createdDate: String
+    let modifiedDate: String
+    let idx: Int
+    let user: userInfo?
+    let price: Int
+    let status: String
+}

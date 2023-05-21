@@ -15,8 +15,10 @@ class PaymentViewController: UIViewController {
     @IBOutlet weak var changeMethodButton: UIButton!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var paymentButton: UIButton!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     
     var shoppingList: [cartList]?
+    var totalPrice: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,12 @@ class PaymentViewController: UIViewController {
             shoppingList = response
             paymentTableView.delegate = self
             paymentTableView.dataSource = self
+            
+            for list in response {
+                totalPrice += list.price
+            }
+            totalPriceLabel.text = "\(totalPrice)원"
+            paymentButton.titleLabel?.text = "\(totalPrice)원"
         }
     }
     

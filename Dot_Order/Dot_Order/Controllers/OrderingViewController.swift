@@ -48,21 +48,23 @@ class OrderingViewController: UIViewController {
         
         super.viewDidAppear(true)
         
-        if orderList!.status == "WAIT" {
-            VoiceService.shared.textToSpeech("가게에서 주문을 확인 중 입니다.")
-            firstCircleView.backgroundColor = UIColor(red: 255, green: 122, blue: 0, alpha: 1)
-            secondCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
-            thirdCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
-        } else if orderList!.status == "DOING" {
-            VoiceService.shared.textToSpeech("음식이 조리 중 입니다.")
-            firstCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
-            secondCircleView.backgroundColor = UIColor(red: 255, green: 122, blue: 0, alpha: 1)
-            thirdCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
-        } else {
-            VoiceService.shared.textToSpeech("조리가 완료되었습니다. 곧 음식이 나옵니다.")
-            firstCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
-            secondCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
-            thirdCircleView.backgroundColor = UIColor(red: 255, green: 122, blue: 0, alpha: 1)
+        APIService.shared.orderGet() { [self](response) in
+            if response.status == "WAIT" {
+                VoiceService.shared.textToSpeech("가게에서 주문을 확인 중 입니다.")
+                firstCircleView.backgroundColor = UIColor(red: 255, green: 122, blue: 0, alpha: 1)
+                secondCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
+                thirdCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
+            } else if response.status == "DOING" {
+                VoiceService.shared.textToSpeech("음식이 조리 중 입니다.")
+                firstCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
+                secondCircleView.backgroundColor = UIColor(red: 255, green: 122, blue: 0, alpha: 1)
+                thirdCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
+            } else {
+                VoiceService.shared.textToSpeech("조리가 완료되었습니다. 곧 음식이 나옵니다.")
+                firstCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
+                secondCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
+                thirdCircleView.backgroundColor = UIColor(red: 255, green: 122, blue: 0, alpha: 1)
+            }
         }
     }
     
@@ -86,16 +88,17 @@ class OrderingViewController: UIViewController {
     }
     
     @IBAction func cancelButtonClicked(_ sender: Any) {
-        guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return }
-        mainVC.modalPresentationStyle = .fullScreen
-        self.present(mainVC, animated: true)
+        print("홈버튼 클릭")
+        guard let mainNC = self.storyboard?.instantiateViewController(withIdentifier: "MainNC") else { return }
+        mainNC.modalPresentationStyle = .fullScreen
+        self.present(mainNC, animated: true)
     }
 }
 
 extension OrderingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orderList?.orderDetails.count ?? 0
+        return orderList!.orderDetails.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

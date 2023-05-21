@@ -63,7 +63,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14,500원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68S-hH-heX">
-                                                        <rect key="frame" x="185" y="32.666666666666686" width="151" height="45"/>
+                                                        <rect key="frame" x="185.66666666666663" y="32.666666666666686" width="150.33333333333337" height="45"/>
                                                         <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -113,13 +113,13 @@
                                                 <rect key="frame" x="20" y="629" width="353" height="215.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="****-****-****-6456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1y-zU-Vt9">
-                                                        <rect key="frame" x="77" y="168" width="262" height="30"/>
+                                                        <rect key="frame" x="77.333333333333343" y="168" width="261.66666666666663" height="30"/>
                                                         <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="24"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KB 카드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF5-Lg-W4O">
-                                                        <rect key="frame" x="202" y="110" width="137" height="50"/>
+                                                        <rect key="frame" x="202.66666666666663" y="110" width="136.33333333333337" height="50"/>
                                                         <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -208,6 +208,7 @@
                         <outlet property="changeMethodButton" destination="EHI-3b-bW5" id="L4f-zx-bac"/>
                         <outlet property="paymentButton" destination="xpg-lv-aBa" id="q1s-gN-ESu"/>
                         <outlet property="paymentTableView" destination="gI6-5k-3el" id="u6K-mN-3qe"/>
+                        <outlet property="totalPriceLabel" destination="68S-hH-heX" id="Qqk-Jq-uv7"/>
                         <outlet property="totalPriceView" destination="1UD-jH-bGr" id="atz-by-DyZ"/>
                     </connections>
                 </viewController>

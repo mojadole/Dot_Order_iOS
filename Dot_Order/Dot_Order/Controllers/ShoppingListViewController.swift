@@ -70,10 +70,12 @@ class ShoppingListViewController: UIViewController {
     }
     
     @IBAction func modifyBtnClicked(_ sender: Any) {
+        VoiceService.shared.stopSpeak()
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func payBtnClicked(_ sender: Any) {
+        VoiceService.shared.stopSpeak()
         guard let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentViewController else { return }
         navigationController?.pushViewController(paymentVC, animated: true)
     }

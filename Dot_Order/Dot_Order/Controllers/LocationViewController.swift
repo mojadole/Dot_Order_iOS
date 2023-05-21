@@ -53,6 +53,8 @@ class LocationViewController: UIViewController {
     }
     
     @IBAction func orderButtonClicked(_ sender: Any) {
+        VoiceService.shared.stopSpeak()
+        
         guard let orderVC = self.storyboard?.instantiateViewController(withIdentifier: "OrderVC") as? OrderViewController else { return }
         self.navigationController?.pushViewController(orderVC, animated: true)
     }

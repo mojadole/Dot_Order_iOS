@@ -35,9 +35,9 @@ class APIService {
                    parameters: params,
                    encoding: JSONEncoding.default,
                    headers: header
-        ).responseJSON { response in
+        ).responseDecodable(of: cartData.self) { response in
             switch response.result {
-            case .success(let result):
+            case .success(_):
                 print("장바구니 정보 post 성공")
                 completion()
             case .failure(let error):
@@ -72,12 +72,7 @@ class APIService {
         
         let url = appDelegate.baseUrl + "/cart/" + String(appDelegate.userIdx) + "/update"
         let params: [String: Any] = [
-            "user": [
-                "idx": 1
-            ],
-            "menu": [
-                "name": menu
-            ],
+            "menu_name": menu,
             "count": count
         ]
         
@@ -86,11 +81,11 @@ class APIService {
                    parameters: params,
                    encoding: JSONEncoding.default,
                    headers: header
-        ).responseDecodable(of: CartModel.self) { response in
+        ).responseDecodable(of: cartData.self) { response in
             switch response.result {
             case .success(let cart):
                 print("장바구니 정보 업데이트 성공")
-                completion(cart.cartData!)
+                completion(cart)
             case .failure(let error):
                 print("error: \(error.localizedDescription)")
             }
@@ -105,10 +100,11 @@ class APIService {
                    method: .post,
                    encoding: JSONEncoding.default,
                    headers: header
-        ).responseJSON { response in
+        ).responseDecodable(of: orderData.self) { [self](response) in
             switch response.result {
-            case .success(_):
+            case .success(let data):
                 print("Order 정보 post 성공")
+                appDelegate.orderIdx = data.orderIdx
                 completion()
             case .failure(let error):
                 print("error: \(error.localizedDescription)")
@@ -119,17 +115,17 @@ class APIService {
     
     // MARK: 주문 GET
     func orderGet(completion: @escaping (orderData) -> Void) {
-        let url = appDelegate.baseUrl + "/order/" + String(appDelegate.userIdx)
+        let url = appDelegate.baseUrl + "/order/" + String(appDelegate.orderIdx ?? 1)
         
         AF.request(url,
                    method: .get,
                    encoding: JSONEncoding.default,
                    headers: header
-        ).responseDecodable(of: OrderModel.self) { response in
+        ).responseDecodable(of: orderData.self) { response in
             switch response.result {
-            case .success(let result):
-                print(result.orderData)
-                completion(result.orderData!)
+            case .success(let data):
+                print(data)
+                completion(data)
             case .failure(let error):
                 print("error: \(error.localizedDescription)")
             }
@@ -137,7 +133,7 @@ class APIService {
     }
     
     // MARK: 추천 메뉴 GET
-    func recommendGet(_ menu: String, completion: @escaping ([String: Int]) -> Void) {
+    func recommendGet(_ menu: String, completion: @escaping ([[String]]) -> Void) {
         
         let urlStr = appDelegate.recommendUrl + menu
         guard let encodingUrl = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
@@ -147,10 +143,10 @@ class APIService {
                    method: .get,
                    encoding: JSONEncoding.default,
                    headers: header
-        ).responseDecodable(of: [String: Int].self) { response in
+        ).responseDecodable(of: [[String]].self) { response in
             switch response.result {
             case .success(let result):
-                print(result)
+                print("추천 메뉴 get 성공")
                 completion(result)
             case .failure(let error):
                 print("error: \(error.localizedDescription)")
