@@ -100,11 +100,11 @@ class APIService {
                    method: .post,
                    encoding: JSONEncoding.default,
                    headers: header
-        ).responseDecodable(of: orderData.self) { [self](response) in
+        ).responseDecodable(of: orderPostData.self) { [self](response) in
             switch response.result {
             case .success(let data):
                 print("Order 정보 post 성공")
-                appDelegate.orderIdx = data.orderIdx
+                appDelegate.orderIdx = data.idx
                 completion()
             case .failure(let error):
                 print("error: \(error.localizedDescription)")
@@ -147,6 +147,7 @@ class APIService {
             switch response.result {
             case .success(let result):
                 print("추천 메뉴 get 성공")
+                print(result)
                 completion(result)
             case .failure(let error):
                 print("error: \(error.localizedDescription)")

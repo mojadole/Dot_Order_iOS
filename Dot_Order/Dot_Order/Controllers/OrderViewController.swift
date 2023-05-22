@@ -72,14 +72,10 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                             VoiceService.shared.textToSpeech("추천 메뉴는 \(response[0][0]) \(response[0][1])원, \(response[1][0]) \(response[1][1])원, \(response[2][0]) \(response[2][1])원 입니다.")
                         }
                     }
-                }
-                
-                if userResponse == "어" || userResponse == "엉" || userResponse == "응" {
+                } else if userResponse == "어" || userResponse == "엉" || userResponse == "응" {
                     guard let shoppingListVC = self.storyboard?.instantiateViewController(withIdentifier: "ShoppingListVC") as? ShoppingListViewController else { return }
                     self.navigationController?.pushViewController(shoppingListVC, animated: true)
-                }
-                
-                if responseList.contains("육개장") || responseList.contains("육계장") {
+                } else if responseList.contains("육개장") || responseList.contains("육계장") {
                     if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") {
                         print("post 시작")
                         APIService.shared.cartPost("육개장", 1) {
@@ -88,11 +84,11 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                     } else {
                         VoiceService.shared.textToSpeech("해당 메뉴가 가게에 존재합니다.")
                     }
-                }
-                
-                if userResponse == "결제할게" || userResponse == "결제할께" {
+                } else if userResponse == "결제할게" || userResponse == "결제할께" {
                     guard let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentViewController else { return }
                     self.navigationController?.pushViewController(paymentVC, animated: true)
+                } else {
+                    VoiceService.shared.textToSpeech("다시 말씀해주세요.")
                 }
             }
         }
