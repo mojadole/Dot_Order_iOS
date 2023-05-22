@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PId-5r-AQ2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PId-5r-AQ2">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-Sp-n6O">
-                                <rect key="frame" x="26" y="290.66666666666669" width="341" height="271.00000000000006"/>
+                                <rect key="frame" x="26" y="275.66666666666669" width="341" height="271.00000000000006"/>
                                 <color key="backgroundColor" name="main_color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="height" multiplier="341:271" id="cg8-i4-gVk"/>
@@ -40,7 +41,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3a-gG-8P5">
-                                <rect key="frame" x="26" y="611.66666666666663" width="341" height="107"/>
+                                <rect key="frame" x="26" y="703.66666666666663" width="341" height="107"/>
                                 <color key="backgroundColor" name="main_color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="g3a-gG-8P5" secondAttribute="height" multiplier="341:107" id="Uef-Uu-xq0"/>
@@ -51,18 +52,33 @@
                                     <color key="titleColor" name="background_color"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7o-s9-PDp">
+                                <rect key="frame" x="26" y="571.66666666666663" width="341" height="107"/>
+                                <color key="backgroundColor" name="main_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s7o-s9-PDp" secondAttribute="height" multiplier="341:107" id="Wvs-T0-32q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="48"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="현재 주문 내역">
+                                    <color key="titleColor" name="background_color"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="background_color"/>
                         <constraints>
-                            <constraint firstItem="0Ds-Sp-n6O" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="1Pt-53-sod"/>
+                            <constraint firstItem="0Ds-Sp-n6O" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-15" id="1Pt-53-sod"/>
+                            <constraint firstItem="s7o-s9-PDp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8Fp-GI-90X"/>
+                            <constraint firstItem="g3a-gG-8P5" firstAttribute="top" secondItem="s7o-s9-PDp" secondAttribute="bottom" constant="25" id="LhA-O0-MJ5"/>
                             <constraint firstItem="0Ds-Sp-n6O" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="26" id="Nfa-cO-apa"/>
                             <constraint firstItem="7AC-m4-rlb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RSh-dd-VMo"/>
                             <constraint firstItem="7AC-m4-rlb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gll-Aw-0Z9"/>
                             <constraint firstItem="0Ds-Sp-n6O" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hbx-MH-chY"/>
-                            <constraint firstItem="g3a-gG-8P5" firstAttribute="top" secondItem="0Ds-Sp-n6O" secondAttribute="bottom" constant="50" id="j4h-1b-ldw"/>
                             <constraint firstItem="7AC-m4-rlb" firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="width" multiplier="0.7" id="k2B-zO-AqU"/>
+                            <constraint firstItem="s7o-s9-PDp" firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="width" id="lm7-eW-lmg"/>
                             <constraint firstItem="g3a-gG-8P5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rzj-gI-pZs"/>
+                            <constraint firstItem="s7o-s9-PDp" firstAttribute="top" secondItem="0Ds-Sp-n6O" secondAttribute="bottom" constant="25" id="uMp-nw-GcR"/>
                             <constraint firstItem="g3a-gG-8P5" firstAttribute="width" secondItem="0Ds-Sp-n6O" secondAttribute="width" id="xdb-se-Cuw"/>
                         </constraints>
                     </view>
@@ -70,12 +86,21 @@
                     <connections>
                         <outlet property="logoImageView" destination="7AC-m4-rlb" id="4D2-Fr-dTV"/>
                         <outlet property="orderButton" destination="0Ds-Sp-n6O" id="N6D-c5-p4M"/>
+                        <outlet property="orderingButton" destination="s7o-s9-PDp" id="Haf-Jk-3x2"/>
                         <outlet property="recentMenuButton" destination="g3a-gG-8P5" id="wHl-MN-rkz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="4"/>
+            <point key="canvasLocation" x="933.58778625954199" y="3.5211267605633805"/>
+        </scene>
+        <!--Ordering-->
+        <scene sceneID="ADo-ra-CGb">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="OrderingVC" storyboardName="Ordering" id="Hr0-u7-ZtO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJM-9u-gEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933" y="-480"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="g3A-bI-vCk">
@@ -91,19 +116,58 @@
                                     <constraint firstAttribute="width" secondItem="zt2-Jm-jwG" secondAttribute="height" multiplier="1:1" id="czr-bx-BYO"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WPs-ns-8P8">
+                                <rect key="frame" x="30" y="698.66666666666663" width="333" height="99.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjX-n1-MsY">
+                                        <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="99.333333333333329"/>
+                                        <color key="backgroundColor" name="main_color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MjX-n1-MsY" secondAttribute="height" multiplier="160:105" id="oWo-RG-jFt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="재검색">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVj-et-Ezv">
+                                        <rect key="frame" x="181.66666666666663" y="0.0" width="151.33333333333337" height="99.333333333333329"/>
+                                        <color key="backgroundColor" name="main_color"/>
+                                        <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="주문">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderButtonClicked:" destination="Xjd-bm-j3C" eventType="touchUpInside" id="D0u-ra-IKS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QVj-et-Ezv" firstAttribute="width" secondItem="QVj-et-Ezv" secondAttribute="height" multiplier="160:105" id="INY-5S-xot"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ezf-5X-r4E"/>
                         <color key="backgroundColor" name="background_color"/>
                         <constraints>
                             <constraint firstItem="zt2-Jm-jwG" firstAttribute="centerX" secondItem="RHz-h8-oeF" secondAttribute="centerX" id="SYZ-Qm-xAe"/>
+                            <constraint firstItem="WPs-ns-8P8" firstAttribute="centerX" secondItem="RHz-h8-oeF" secondAttribute="centerX" id="TM9-k5-7B6"/>
                             <constraint firstItem="zt2-Jm-jwG" firstAttribute="centerY" secondItem="RHz-h8-oeF" secondAttribute="centerY" id="WGU-NB-fBE"/>
+                            <constraint firstItem="Ezf-5X-r4E" firstAttribute="bottom" secondItem="WPs-ns-8P8" secondAttribute="bottom" constant="20" id="WaX-LZ-8oG"/>
+                            <constraint firstItem="WPs-ns-8P8" firstAttribute="leading" secondItem="Ezf-5X-r4E" secondAttribute="leading" constant="30" id="tXv-nI-U3v"/>
                             <constraint firstItem="zt2-Jm-jwG" firstAttribute="leading" secondItem="Ezf-5X-r4E" secondAttribute="leading" constant="100" id="xQr-dK-Rhh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="orderButton" destination="QVj-et-Ezv" id="ncF-K8-Ta6"/>
+                        <outlet property="researchButton" destination="MjX-n1-MsY" id="rNE-gt-aIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWf-C8-gaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909" y="-349"/>
+            <point key="canvasLocation" x="1907.6335877862596" y="-349.29577464788736"/>
         </scene>
         <!--ShoppingList-->
         <scene sceneID="WNA-93-SDv">
@@ -111,7 +175,15 @@
                 <viewControllerPlaceholder storyboardIdentifier="ShoppingListVC" storyboardName="ShoppingList" id="KCX-9u-mgf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dP-9y-5Jg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496" y="356"/>
+            <point key="canvasLocation" x="2530" y="247"/>
+        </scene>
+        <!--Payment-->
+        <scene sceneID="YSl-mj-vjT">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PaymentVC" storyboardName="Payment" id="ML1-5P-pvf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRt-I4-FYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2531" y="466"/>
         </scene>
         <!--RecentOrderList-->
         <scene sceneID="iFq-E7-4mE">
@@ -147,20 +219,45 @@
                                     <color key="titleColor" name="background_color"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4T-cv-moo">
+                                <rect key="frame" x="46.666666666666657" y="229.66666666666666" width="300" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8jf-XY-PIz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIa-Up-prl">
+                                <rect key="frame" x="100" y="329.66666666666669" width="193" height="193.00000000000006"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="speakingButtonClicked:" destination="haM-vT-Arq" eventType="touchUpInside" id="6I6-FU-Gkz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dgC-QT-WCe"/>
                         <color key="backgroundColor" name="background_color"/>
                         <constraints>
+                            <constraint firstItem="UIa-Up-prl" firstAttribute="leading" secondItem="zYv-Rw-eLc" secondAttribute="leading" id="0pT-m1-BTy"/>
                             <constraint firstItem="zYv-Rw-eLc" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="5Dt-4W-lfn"/>
+                            <constraint firstItem="UIa-Up-prl" firstAttribute="height" secondItem="zYv-Rw-eLc" secondAttribute="height" id="L4K-df-zQ6"/>
                             <constraint firstItem="zYv-Rw-eLc" firstAttribute="centerY" secondItem="E6B-vm-t62" secondAttribute="centerY" id="ODJ-37-bXT"/>
                             <constraint firstItem="zfG-Ms-PTD" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="PcP-aQ-F05"/>
+                            <constraint firstItem="UIa-Up-prl" firstAttribute="top" secondItem="zYv-Rw-eLc" secondAttribute="top" id="PsR-iE-WKb"/>
+                            <constraint firstItem="J4T-cv-moo" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="ZWA-ve-IT8"/>
+                            <constraint firstItem="zYv-Rw-eLc" firstAttribute="top" secondItem="J4T-cv-moo" secondAttribute="bottom" constant="100" id="akL-Ab-aOM"/>
                             <constraint firstItem="zfG-Ms-PTD" firstAttribute="leading" secondItem="dgC-QT-WCe" secondAttribute="leading" constant="26" id="izz-70-yJX"/>
                             <constraint firstItem="zYv-Rw-eLc" firstAttribute="leading" secondItem="dgC-QT-WCe" secondAttribute="leading" constant="100" id="kiU-OJ-XCk"/>
+                            <constraint firstItem="UIa-Up-prl" firstAttribute="width" secondItem="zYv-Rw-eLc" secondAttribute="width" id="xnv-Vj-ULR"/>
                             <constraint firstItem="dgC-QT-WCe" firstAttribute="bottom" secondItem="zfG-Ms-PTD" secondAttribute="bottom" constant="40" id="xr7-fH-TQ6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="responseLabel" destination="J4T-cv-moo" id="5EE-gM-Wsk"/>
                         <outlet property="shoppingListButton" destination="zfG-Ms-PTD" id="P8L-82-wRZ"/>
+                        <outlet property="speakingButton" destination="UIa-Up-prl" id="f14-Hz-XLX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bb-JO-WGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,10 +11,17 @@ import UIKit
 class ShoppingListViewController: UIViewController {
     
     @IBOutlet weak var shoppingListTableView: UITableView!
+    @IBOutlet weak var modifyButton: UIButton!
+    @IBOutlet weak var payButton: UIButton!
+    
+    var shoppingList: [cartList]?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        modifyButton.layer.cornerRadius = 15
+        payButton.layer.cornerRadius = 15
         
         self.navigationItem.titleView = attributeTitleView()
         self.navigationController?.navigationBar.topItem?.title = ""
@@ -25,9 +32,18 @@ class ShoppingListViewController: UIViewController {
     
         registerXib()
         
-        shoppingListTableView.dataSource = self
-        shoppingListTableView.delegate = self
-    
+        APIService.shared.cartGet { [self](response) in
+            shoppingList = response
+            shoppingListTableView.dataSource = self
+            shoppingListTableView.delegate = self
+            
+            VoiceService.shared.textToSpeech("현재 장바구니에 담긴 메뉴는")
+            for list in response {
+                VoiceService.shared.textToSpeech("\(list.menu_name) \(list.price) 원 ")
+            }
+            VoiceService.shared.textToSpeech("입니다. 수정을 원하시면 수정 버튼을, 결제를 원하시면 결제 버튼을 클릭해주세요")
+        }
+        
     }
     
     // MARK: Navigation Bar Title 세팅
@@ -52,12 +68,23 @@ class ShoppingListViewController: UIViewController {
         self.shoppingListTableView.register(nibName, forCellReuseIdentifier: "shoppingListCell")
     }
     
+    @IBAction func modifyBtnClicked(_ sender: Any) {
+        VoiceService.shared.stopSpeak()
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func payBtnClicked(_ sender: Any) {
+        VoiceService.shared.stopSpeak()
+        guard let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentViewController else { return }
+        navigationController?.pushViewController(paymentVC, animated: true)
+    }
+    
 }
 
 // MARK: TableView 세팅
 extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return shoppingList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -67,8 +94,10 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingListCell", for: indexPath) as! ShoppingListTableViewCell
         
-        cell.countLabel.text = "1"
-        cell.menuNameLabel.text = "메뉴 \(indexPath.row)"
+        let menuInfo = shoppingList![indexPath.row]
+        
+        cell.countLabel.text = String(menuInfo.count)
+        cell.menuNameLabel.text = menuInfo.menu_name
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
         

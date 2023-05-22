@@ -15,6 +15,8 @@
 		A887D01429D03CC0003715FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A887D01229D03CC0003715FA /* LaunchScreen.storyboard */; };
 		A887D02229D2D055003715FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A887D02129D2D055003715FA /* Main.storyboard */; };
 		A887D02429D2D06B003715FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887D02329D2D06B003715FA /* MainViewController.swift */; };
+		A88E652829E53BED00749F03 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E652729E53BED00749F03 /* EvaluationViewController.swift */; };
+		A88E652A29E53BFC00749F03 /* Evaluation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88E652929E53BFC00749F03 /* Evaluation.storyboard */; };
 		A8A3714229D41B3F00FF6E75 /* SUIT-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713C29D41B3F00FF6E75 /* SUIT-SemiBold.otf */; };
 		A8A3714329D41B3F00FF6E75 /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713D29D41B3F00FF6E75 /* SUIT-Regular.otf */; };
 		A8A3714429D41B3F00FF6E75 /* SUIT-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8A3713E29D41B3F00FF6E75 /* SUIT-ExtraBold.otf */; };
@@ -31,9 +33,24 @@
 		A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */; };
 		A8A3716329DC272800FF6E75 /* RecentOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */; };
 		A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */; };
+		A8C7404629FA228E009D8691 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7404529FA228E009D8691 /* Payment.storyboard */; };
+		A8C7404829FA22A1009D8691 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7404729FA22A1009D8691 /* PaymentViewController.swift */; };
+		A8C7404B29FA2C6E009D8691 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7404929FA2C6E009D8691 /* PaymentTableViewCell.swift */; };
+		A8C7404C29FA2C6E009D8691 /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8C7404A29FA2C6E009D8691 /* PaymentTableViewCell.xib */; };
+		A8DD72FE2A0E2E87008373F5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD72FD2A0E2E87008373F5 /* APIService.swift */; };
+		A8DD73002A0E2EBD008373F5 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD72FF2A0E2EBD008373F5 /* CartModel.swift */; };
+		A8DD73062A17545D008373F5 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD73052A17545D008373F5 /* OrderModel.swift */; };
+		A8DD73082A175A3F008373F5 /* VoiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD73072A175A3F008373F5 /* VoiceService.swift */; };
+		A8F58E1D2A0803B200FFDC29 /* Ordering.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F58E1C2A0803B200FFDC29 /* Ordering.storyboard */; };
+		A8F58E1F2A0803CF00FFDC29 /* OrderingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F58E1E2A0803CF00FFDC29 /* OrderingViewController.swift */; };
+		A8F58E212A0CB4C400FFDC29 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F58E202A0CB4C400FFDC29 /* LoginModel.swift */; };
+		E4700603B45011F6CF28076D /* Pods_Dot_Order.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4496B836BBD133A4D9BFEF /* Pods_Dot_Order.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D4496B836BBD133A4D9BFEF /* Pods_Dot_Order.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dot_Order.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88DC98AB15529866B73F3F1B /* Pods-Dot_Order.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Order.release.xcconfig"; path = "Target Support Files/Pods-Dot_Order/Pods-Dot_Order.release.xcconfig"; sourceTree = "<group>"; };
+		A227B3026BB7480C1B19C0C8 /* Pods-Dot_Order.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dot_Order.debug.xcconfig"; path = "Target Support Files/Pods-Dot_Order/Pods-Dot_Order.debug.xcconfig"; sourceTree = "<group>"; };
 		A887D00429D03CBF003715FA /* Dot_Order.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dot_Order.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A887D00729D03CBF003715FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A887D00929D03CBF003715FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +61,8 @@
 		A887D01529D03CC0003715FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A887D02129D2D055003715FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A887D02329D2D06B003715FA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A88E652729E53BED00749F03 /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
+		A88E652929E53BFC00749F03 /* Evaluation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Evaluation.storyboard; sourceTree = "<group>"; };
 		A8A3713C29D41B3F00FF6E75 /* SUIT-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.otf"; sourceTree = "<group>"; };
 		A8A3713D29D41B3F00FF6E75 /* SUIT-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Regular.otf"; sourceTree = "<group>"; };
 		A8A3713E29D41B3F00FF6E75 /* SUIT-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -60,6 +79,17 @@
 		A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingListTableViewCell.xib; sourceTree = "<group>"; };
 		A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentOrderTableViewCell.swift; sourceTree = "<group>"; };
 		A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentOrderTableViewCell.xib; sourceTree = "<group>"; };
+		A8C7404529FA228E009D8691 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		A8C7404729FA22A1009D8691 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		A8C7404929FA2C6E009D8691 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		A8C7404A29FA2C6E009D8691 /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
+		A8DD72FD2A0E2E87008373F5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		A8DD72FF2A0E2EBD008373F5 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
+		A8DD73052A17545D008373F5 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		A8DD73072A175A3F008373F5 /* VoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceService.swift; sourceTree = "<group>"; };
+		A8F58E1C2A0803B200FFDC29 /* Ordering.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ordering.storyboard; sourceTree = "<group>"; };
+		A8F58E1E2A0803CF00FFDC29 /* OrderingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingViewController.swift; sourceTree = "<group>"; };
+		A8F58E202A0CB4C400FFDC29 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +97,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4700603B45011F6CF28076D /* Pods_Dot_Order.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1A10F1ABC7F8A1C5949D95C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A227B3026BB7480C1B19C0C8 /* Pods-Dot_Order.debug.xcconfig */,
+				88DC98AB15529866B73F3F1B /* Pods-Dot_Order.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A887CFFB29D03CBF003715FA = {
 			isa = PBXGroup;
 			children = (
 				A887D00629D03CBF003715FA /* Dot_Order */,
 				A887D00529D03CBF003715FA /* Products */,
+				A1A10F1ABC7F8A1C5949D95C /* Pods */,
+				ED0D6AA86C8BF7E241C90F87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +134,7 @@
 		A887D00629D03CBF003715FA /* Dot_Order */ = {
 			isa = PBXGroup;
 			children = (
+				A8DD72FA2A0DF9F5008373F5 /* Services */,
 				A887D01E29D2C690003715FA /* Views */,
 				A887D01D29D2C5E2003715FA /* Controllers */,
 				A887D01C29D2C5C8003715FA /* ViewModels */,
@@ -110,6 +153,9 @@
 		A887D01B29D2C341003715FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8F58E202A0CB4C400FFDC29 /* LoginModel.swift */,
+				A8DD72FF2A0E2EBD008373F5 /* CartModel.swift */,
+				A8DD73052A17545D008373F5 /* OrderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +176,9 @@
 				A8A3714829D420E600FF6E75 /* OrderViewController.swift */,
 				A8A3714E29DA9F3F00FF6E75 /* ShoppingListViewController.swift */,
 				A8A3715229DAA11900FF6E75 /* RecentOrderListViewController.swift */,
+				A88E652729E53BED00749F03 /* EvaluationViewController.swift */,
+				A8C7404729FA22A1009D8691 /* PaymentViewController.swift */,
+				A8F58E1E2A0803CF00FFDC29 /* OrderingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -141,6 +190,9 @@
 				A887D02129D2D055003715FA /* Main.storyboard */,
 				A8A3714C29DA9F0F00FF6E75 /* ShoppingList.storyboard */,
 				A8A3715029DAA0FA00FF6E75 /* RecentOrderList.storyboard */,
+				A88E652929E53BFC00749F03 /* Evaluation.storyboard */,
+				A8C7404529FA228E009D8691 /* Payment.storyboard */,
+				A8F58E1C2A0803B200FFDC29 /* Ordering.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,8 +217,27 @@
 				A8A3715E29DAD6E000FF6E75 /* ShoppingListTableViewCell.xib */,
 				A8A3716129DC272800FF6E75 /* RecentOrderTableViewCell.swift */,
 				A8A3716229DC272800FF6E75 /* RecentOrderTableViewCell.xib */,
+				A8C7404929FA2C6E009D8691 /* PaymentTableViewCell.swift */,
+				A8C7404A29FA2C6E009D8691 /* PaymentTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A8DD72FA2A0DF9F5008373F5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A8DD72FD2A0E2E87008373F5 /* APIService.swift */,
+				A8DD73072A175A3F008373F5 /* VoiceService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED0D6AA86C8BF7E241C90F87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D4496B836BBD133A4D9BFEF /* Pods_Dot_Order.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A887D01829D03CC0003715FA /* Build configuration list for PBXNativeTarget "Dot_Order" */;
 			buildPhases = (
+				37209C7348A403A2A6B3881B /* [CP] Check Pods Manifest.lock */,
 				A887D00029D03CBF003715FA /* Sources */,
 				A887D00129D03CBF003715FA /* Frameworks */,
 				A887D00229D03CBF003715FA /* Resources */,
+				ECDF730C32F6A2F24711A9F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,12 +300,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A88E652A29E53BFC00749F03 /* Evaluation.storyboard in Resources */,
 				A8A3714629D41B3F00FF6E75 /* SUIT-Heavy.otf in Resources */,
+				A8F58E1D2A0803B200FFDC29 /* Ordering.storyboard in Resources */,
 				A8A3716429DC272800FF6E75 /* RecentOrderTableViewCell.xib in Resources */,
 				A8A3716029DAD6E000FF6E75 /* ShoppingListTableViewCell.xib in Resources */,
+				A8C7404C29FA2C6E009D8691 /* PaymentTableViewCell.xib in Resources */,
 				A8A3714D29DA9F0F00FF6E75 /* ShoppingList.storyboard in Resources */,
 				A887D01429D03CC0003715FA /* LaunchScreen.storyboard in Resources */,
 				A8A3714329D41B3F00FF6E75 /* SUIT-Regular.otf in Resources */,
+				A8C7404629FA228E009D8691 /* Payment.storyboard in Resources */,
 				A887D01129D03CC0003715FA /* Assets.xcassets in Resources */,
 				A887D00F29D03CBF003715FA /* Login.storyboard in Resources */,
 				A8A3714229D41B3F00FF6E75 /* SUIT-SemiBold.otf in Resources */,
@@ -246,6 +323,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37209C7348A403A2A6B3881B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dot_Order-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECDF730C32F6A2F24711A9F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dot_Order/Pods-Dot_Order-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dot_Order/Pods-Dot_Order-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dot_Order/Pods-Dot_Order-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A887D00029D03CBF003715FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -257,9 +376,18 @@
 				A8A3714F29DA9F3F00FF6E75 /* ShoppingListViewController.swift in Sources */,
 				A8A3714B29D6A86C00FF6E75 /* LocationViewController.swift in Sources */,
 				A887D00A29D03CBF003715FA /* SceneDelegate.swift in Sources */,
+				A8C7404B29FA2C6E009D8691 /* PaymentTableViewCell.swift in Sources */,
+				A88E652829E53BED00749F03 /* EvaluationViewController.swift in Sources */,
+				A8F58E1F2A0803CF00FFDC29 /* OrderingViewController.swift in Sources */,
+				A8DD73002A0E2EBD008373F5 /* CartModel.swift in Sources */,
+				A8DD72FE2A0E2E87008373F5 /* APIService.swift in Sources */,
+				A8C7404829FA22A1009D8691 /* PaymentViewController.swift in Sources */,
+				A8F58E212A0CB4C400FFDC29 /* LoginModel.swift in Sources */,
+				A8DD73082A175A3F008373F5 /* VoiceService.swift in Sources */,
 				A8A3715329DAA11900FF6E75 /* RecentOrderListViewController.swift in Sources */,
 				A887D02429D2D06B003715FA /* MainViewController.swift in Sources */,
 				A8A3715F29DAD6E000FF6E75 /* ShoppingListTableViewCell.swift in Sources */,
+				A8DD73062A17545D008373F5 /* OrderModel.swift in Sources */,
 				A8A3716329DC272800FF6E75 /* RecentOrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +530,7 @@
 		};
 		A887D01929D03CC0003715FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A227B3026BB7480C1B19C0C8 /* Pods-Dot_Order.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,6 +559,7 @@
 		};
 		A887D01A29D03CC0003715FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88DC98AB15529866B73F3F1B /* Pods-Dot_Order.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

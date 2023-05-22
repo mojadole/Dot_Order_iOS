@@ -6,13 +6,29 @@
 //
 
 import UIKit
+import ApiAI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    public let baseUrl = "http://13.209.200.143:8080"
+    public let userIdx = 1
+    public let userGps = "(37.234234, 123.2342)"
+    public let recommendUrl = "http://15.165.152.102:5000/search_menu?menu_name="
+    public var orderIdx: Int?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        var apiAI: ApiAI?
+        apiAI = ApiAI.shared()
+        
+        // Define API.AI configuration here.
+        let configuration = AIDefaultConfiguration()
+        configuration.clientAccessToken = "3fae789965b16afa6a3749b4ed972ff11f7c27a6"
+
+        apiAI?.configuration = configuration
         
         return true
         

@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var recentMenuButton: UIButton!
+    @IBOutlet weak var orderingButton: UIButton!
     
     override func viewDidLoad() {
         
@@ -22,6 +23,7 @@ class MainViewController: UIViewController {
         logoImageView.isAccessibilityElement = false
         orderButton.layer.cornerRadius = 20
         recentMenuButton.layer.cornerRadius = 20
+        orderingButton.layer.cornerRadius = 20
         
         orderButton.accessibilityLabel = "주문하기"
         orderButton.accessibilityHint = "메뉴를 주문하기 위한 페이지로 이동합니다"
@@ -32,6 +34,11 @@ class MainViewController: UIViewController {
         recentMenuButton.accessibilityHint = "최근 주문한 내역들을 확인하는 페이지로 이동합니다"
         recentMenuButton.accessibilityTraits = .button
         recentMenuButton.addTarget(self, action: #selector(recentOrder(_:)), for: .touchUpInside)
+        
+        orderingButton.accessibilityLabel = "현재 주문 상황 확인"
+        orderingButton.accessibilityHint = "현재 주문 상황을 확인할 수 있는 페이지로 이동합니다"
+        orderingButton.accessibilityTraits = .button
+        orderingButton.addTarget(self, action: #selector(ordering(_:)), for: .touchUpInside)
         
     }
     
@@ -50,16 +57,21 @@ class MainViewController: UIViewController {
     
     //가게 위치 탐색 페이지로 이동
     @objc func findLocation(_ sender: UIButton) {
-//        guard let locationVC = self.storyboard?.instantiateViewController(withIdentifier: "LocationVC") else { return }
-//        self.navigationController?.pushViewController(locationVC, animated: true)
-        guard let orderVC = self.storyboard?.instantiateViewController(withIdentifier: "OrderVC") else { return }
-        self.navigationController?.pushViewController(orderVC, animated: true)
+        guard let locationVC = self.storyboard?.instantiateViewController(withIdentifier: "LocationVC") else { return }
+        self.navigationController?.pushViewController(locationVC, animated: true)
     }
     
     //최근 주문 메뉴 리스트 페이지로 이동
     @objc func recentOrder(_ sender: UIButton) {
         guard let recentOrderVC = self.storyboard?.instantiateViewController(withIdentifier: "RecentOrderVC") else { return }
         self.navigationController?.pushViewController(recentOrderVC, animated: true)
+    }
+    
+    //현재 주문 상황 페이지로 이동
+    @objc func ordering(_ sender: UIButton) {
+        guard let orderingVC = self.storyboard?.instantiateViewController(withIdentifier: "OrderingVC") else { return }
+        orderingVC.modalPresentationStyle = .fullScreen
+        self.present(orderingVC, animated: true)
     }
     
 }
