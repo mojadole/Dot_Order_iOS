@@ -15,6 +15,8 @@ class OrderingViewController: UIViewController {
     @IBOutlet weak var firstCircleView: UIView!
     @IBOutlet weak var secondCircleView: UIView!
     @IBOutlet weak var thirdCircleView: UIView!
+    @IBOutlet weak var orderLabel: UILabel!
+    @IBOutlet weak var orderIdxLabel: UILabel!
     @IBOutlet weak var homeButton: UIButton!
     
     var orderList: orderData?
@@ -50,17 +52,24 @@ class OrderingViewController: UIViewController {
         
         APIService.shared.orderGet() { [self](response) in
             
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            
+            orderIdxLabel.text = "\(appDelegate.orderIdx ?? 1)번"
+            
             if response.status == "WAIT" {
+                orderLabel.text = "접수 중"
                 VoiceService.shared.textToSpeech("가게에서 주문을 확인 중 입니다.")
                 firstCircleView.backgroundColor = UIColor(red: 255, green: 122, blue: 0, alpha: 1)
                 secondCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
                 thirdCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
             } else if response.status == "DOING" {
+                orderLabel.text = "조리 중"
                 VoiceService.shared.textToSpeech("음식이 조리 중 입니다.")
                 firstCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
                 secondCircleView.backgroundColor = UIColor(red: 255, green: 122, blue: 0, alpha: 1)
                 thirdCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
             } else {
+                orderLabel.text = "조리 완료"
                 VoiceService.shared.textToSpeech("조리가 완료되었습니다. 곧 음식이 나옵니다.")
                 firstCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
                 secondCircleView.backgroundColor = UIColor(red: 217, green: 217, blue: 217, alpha: 1)
