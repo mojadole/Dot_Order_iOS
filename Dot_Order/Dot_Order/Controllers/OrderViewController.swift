@@ -43,6 +43,7 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
         super.viewDidAppear(animated)
         
         VoiceService.shared.textToSpeech("원하는 메뉴명을 말씀해주세요")
+        responseLabel.text = "원하는 메뉴명을 말씀해주세요"
     }
     
     // MARK: speaking Button Click Function
@@ -65,11 +66,14 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                     if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") {
                         APIService.shared.cartPost("수제왕돈까스", 1) {
                             VoiceService.shared.textToSpeech("수제 왕돈까스 1개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?")
+                            self.responseLabel.text = "수제 왕돈까스 1개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?"
                         }
                     } else {
                         VoiceService.shared.textToSpeech("해당 메뉴가 존재하지 않아 추천 메뉴 세 가지를 말씀해드리겠습니다. 잠시만 기다려 주세요.")
+                        self.responseLabel.text = "해당 메뉴가 존재하지 않아 추천 메뉴 세 가지를 말씀해드리겠습니다. 잠시만 기다려 주세요"
                         APIService.shared.recommendGet("돈까스") { response in
                             VoiceService.shared.textToSpeech("추천 메뉴는 \(response[0][0]) \(response[0][1])원, \(response[1][0]) \(response[1][1])원, \(response[2][0]) \(response[2][1])원 입니다.")
+                            self.responseLabel.text = "추천 메뉴는 \(response[0][0]) \(response[0][1])원, \(response[1][0]) \(response[1][1])원, \(response[2][0]) \(response[2][1])원 입니다."
                         }
                     }
                 } else if userResponse == "어" || userResponse == "엉" || userResponse == "응" {
@@ -80,15 +84,18 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                         print("post 시작")
                         APIService.shared.cartPost("육개장", 1) {
                             VoiceService.shared.textToSpeech("육개장 한 개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?")
+                            self.responseLabel.text = "육개장 한 개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?"
                         }
                     } else {
                         VoiceService.shared.textToSpeech("해당 메뉴가 가게에 존재합니다.")
+                        self.responseLabel.text = "해당 메뉴가 가게에 존재합니다"
                     }
                 } else if userResponse == "결제할게" || userResponse == "결제할께" {
                     guard let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentViewController else { return }
                     self.navigationController?.pushViewController(paymentVC, animated: true)
                 } else {
-                    VoiceService.shared.textToSpeech("다시 말씀해주세요.")
+                    VoiceService.shared.textToSpeech("다시 말씀해주세요")
+                    self.responseLabel.text = "다시 말씀해주세요"
                 }
             }
         }

@@ -144,6 +144,8 @@
                         <outlet property="cookingView" destination="XZx-jk-EWc" id="00R-Jx-1HU"/>
                         <outlet property="firstCircleView" destination="H8Y-WW-5jg" id="tbI-Xl-DWW"/>
                         <outlet property="homeButton" destination="gvu-XY-ZAI" id="9jT-iJ-vUZ"/>
+                        <outlet property="orderIdxLabel" destination="s9t-nU-oZK" id="IWM-va-Gi6"/>
+                        <outlet property="orderLabel" destination="K4E-u1-Hum" id="Yp5-bx-JIN"/>
                         <outlet property="orderListTableView" destination="jGb-YV-xs1" id="Y5P-Sj-XPj"/>
                         <outlet property="secondCircleView" destination="LOO-rq-bw8" id="Z27-VY-nEm"/>
                         <outlet property="thirdCircleView" destination="3s9-TP-Mfb" id="cB3-7e-cK1"/>
