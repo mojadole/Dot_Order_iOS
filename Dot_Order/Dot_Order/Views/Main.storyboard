@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SUIT-Bold.otf">
+            <string>SUIT-Bold</string>
+        </array>
         <array key="SUIT-ExtraBold.otf">
             <string>SUIT-ExtraBold</string>
         </array>
@@ -219,12 +222,12 @@
                                     <color key="titleColor" name="background_color"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4T-cv-moo">
-                                <rect key="frame" x="46.666666666666657" y="229.66666666666666" width="300" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4T-cv-moo">
+                                <rect key="frame" x="46.666666666666657" y="109" width="300" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="8jf-XY-PIz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SUIT-ExtraBold" family="SUIT" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SUIT-Bold" family="SUIT" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -247,9 +250,9 @@
                             <constraint firstItem="zfG-Ms-PTD" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="PcP-aQ-F05"/>
                             <constraint firstItem="UIa-Up-prl" firstAttribute="top" secondItem="zYv-Rw-eLc" secondAttribute="top" id="PsR-iE-WKb"/>
                             <constraint firstItem="J4T-cv-moo" firstAttribute="centerX" secondItem="E6B-vm-t62" secondAttribute="centerX" id="ZWA-ve-IT8"/>
-                            <constraint firstItem="zYv-Rw-eLc" firstAttribute="top" secondItem="J4T-cv-moo" secondAttribute="bottom" constant="100" id="akL-Ab-aOM"/>
                             <constraint firstItem="zfG-Ms-PTD" firstAttribute="leading" secondItem="dgC-QT-WCe" secondAttribute="leading" constant="26" id="izz-70-yJX"/>
                             <constraint firstItem="zYv-Rw-eLc" firstAttribute="leading" secondItem="dgC-QT-WCe" secondAttribute="leading" constant="100" id="kiU-OJ-XCk"/>
+                            <constraint firstItem="J4T-cv-moo" firstAttribute="top" secondItem="dgC-QT-WCe" secondAttribute="top" constant="50" id="pIl-wI-6OL"/>
                             <constraint firstItem="UIa-Up-prl" firstAttribute="width" secondItem="zYv-Rw-eLc" secondAttribute="width" id="xnv-Vj-ULR"/>
                             <constraint firstItem="dgC-QT-WCe" firstAttribute="bottom" secondItem="zfG-Ms-PTD" secondAttribute="bottom" constant="40" id="xr7-fH-TQ6"/>
                         </constraints>

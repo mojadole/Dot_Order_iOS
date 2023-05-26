@@ -63,7 +63,7 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                 let responseList = response.components(separatedBy: " ")
                 
                 if responseList.contains("돈까스") {
-                    if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") {
+                    if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") || responseList.contains("주문해줘") {
                         APIService.shared.cartPost("수제왕돈까스", 1) {
                             VoiceService.shared.textToSpeech("수제 왕돈까스 1개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?")
                             self.responseLabel.text = "수제 왕돈까스 1개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?"
@@ -80,15 +80,15 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                     guard let shoppingListVC = self.storyboard?.instantiateViewController(withIdentifier: "ShoppingListVC") as? ShoppingListViewController else { return }
                     self.navigationController?.pushViewController(shoppingListVC, animated: true)
                 } else if responseList.contains("육개장") || responseList.contains("육계장") {
-                    if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") {
+                    if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") || responseList.contains("주문해줘") {
                         print("post 시작")
                         APIService.shared.cartPost("육개장", 1) {
                             VoiceService.shared.textToSpeech("육개장 한 개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?")
                             self.responseLabel.text = "육개장 한 개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?"
                         }
                     } else {
-                        VoiceService.shared.textToSpeech("해당 메뉴가 가게에 존재합니다.")
-                        self.responseLabel.text = "해당 메뉴가 가게에 존재합니다"
+                        VoiceService.shared.textToSpeech("해당 메뉴가 가게에 존재합니다. 원하시는 수량을 말씀해 주세요")
+                        self.responseLabel.text = "해당 메뉴가 가게에 존재합니다. 원하시는 수량을 말씀해 주세요"
                     }
                 } else if userResponse == "결제할게" || userResponse == "결제할께" {
                     guard let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentViewController else { return }

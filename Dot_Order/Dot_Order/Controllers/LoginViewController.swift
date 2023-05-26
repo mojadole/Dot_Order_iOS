@@ -33,6 +33,10 @@ class LoginViewController: UIViewController {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     
     // MARK: 로그인 버튼
     @IBAction func loginButtonTapped(_ sender: Any) {
