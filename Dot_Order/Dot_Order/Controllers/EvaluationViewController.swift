@@ -5,7 +5,6 @@
 //  Created by 김영현 on 2023/04/11.
 //
 
-import Foundation
 import UIKit
 
 class EvaluationViewController: UIViewController {

@@ -5,7 +5,6 @@
 //  Created by 김영현 on 2023/05/12.
 //
 
-import Foundation
 import UIKit
 import Alamofire
 

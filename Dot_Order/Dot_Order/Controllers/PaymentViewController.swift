@@ -5,7 +5,6 @@
 //  Created by 김영현 on 2023/04/27.
 //
 
-import Foundation
 import UIKit
 
 class PaymentViewController: UIViewController {
@@ -30,6 +29,9 @@ class PaymentViewController: UIViewController {
         changeMethodButton.layer.cornerRadius = 20
         cardView.layer.cornerRadius = 20
         paymentButton.layer.cornerRadius = 20
+        
+        paymentButton.accessibilityLabel = "결제하기"
+        paymentButton.accessibilityTraits = .button
         
         registerXib()
         

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     public let userIdx = 1
     public let userGps = "(37.234234, 123.2342)"
     public let recommendUrl = "http://15.165.152.102:5000/search_menu?menu_name="
-    public var orderIdx: Int?
+    public var orderIdx: Int = 39
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         

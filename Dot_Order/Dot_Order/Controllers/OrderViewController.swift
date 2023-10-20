@@ -5,7 +5,6 @@
 //  Created by 김영현 on 2023/03/29.
 //
 
-import Foundation
 import UIKit
 import AVFoundation
 import Speech
@@ -62,7 +61,7 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                 let userResponse = response
                 let responseList = response.components(separatedBy: " ")
                 
-                if responseList.contains("돈까스") {
+                if responseList.contains("돈까스") || responseList.contains("왕돈까스") {
                     if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") || responseList.contains("주문해줘") {
                         APIService.shared.cartPost("수제왕돈까스", 1) {
                             VoiceService.shared.textToSpeech("수제 왕돈까스 1개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?")
@@ -93,6 +92,20 @@ class OrderViewController: UIViewController, SFSpeechRecognizerDelegate {
                 } else if userResponse == "결제할게" || userResponse == "결제할께" {
                     guard let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentViewController else { return }
                     self.navigationController?.pushViewController(paymentVC, animated: true)
+                } else if responseList.contains("김밥") || responseList.contains("야채김밥") {
+                    if responseList.contains("주문할게") || responseList.contains("주문할께") || responseList.contains("주문") || responseList.contains("주문해줘") {
+                        APIService.shared.cartPost("야채김밥", 1) {
+                            VoiceService.shared.textToSpeech("야채김밥 1개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?")
+                            self.responseLabel.text = "야채김밥 1개가 장바구니에 담겼습니다. 장바구니를 확인하시겠습니까?"
+                        }
+                    } else {
+                        VoiceService.shared.textToSpeech("해당 메뉴가 존재하지 않아 추천 메뉴 세 가지를 말씀해드리겠습니다. 잠시만 기다려 주세요.")
+                        self.responseLabel.text = "해당 메뉴가 존재하지 않아 추천 메뉴 세 가지를 말씀해드리겠습니다. 잠시만 기다려 주세요"
+                        APIService.shared.recommendGet("김밥") { response in
+                            VoiceService.shared.textToSpeech("추천 메뉴는 \(response[0][0]) \(response[0][1])원, \(response[1][0]) \(response[1][1])원, \(response[2][0]) \(response[2][1])원 입니다.")
+                            self.responseLabel.text = "추천 메뉴는 \(response[0][0]) \(response[0][1])원, \(response[1][0]) \(response[1][1])원, \(response[2][0]) \(response[2][1])원 입니다."
+                        }
+                    }
                 } else {
                     VoiceService.shared.textToSpeech("다시 말씀해주세요")
                     self.responseLabel.text = "다시 말씀해주세요"

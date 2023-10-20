@@ -5,7 +5,6 @@
 //  Created by 김영현 on 2023/05/08.
 //
 
-import Foundation
 import UIKit
 
 class OrderingViewController: UIViewController {
@@ -125,7 +124,11 @@ extension OrderingViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.menuNameLabel.text = menu!.menuName
         cell.countLabel.text = "\(menu!.count) 개"
-        cell.priceLabel.text = "3500원"
+        if indexPath.row == 0 {
+            cell.priceLabel.text = "9000원"
+        } else {
+            cell.priceLabel.text = "7000원"
+        }
         
         return cell
     }
